@@ -1,0 +1,9 @@
+@charset 'utf-8';
+
+@import 'defaults/colors';
+
+
+.Header {
+    background: $color-dark-blue;
+    color: $color-white;
+}

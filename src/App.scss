@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .Header {
+        height: 50vh;
+    }
+
+    .Content {
+        height: 50vh;
+        overflow-y: scroll;
+    }
+}

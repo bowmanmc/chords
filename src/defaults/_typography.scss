@@ -1,0 +1,66 @@
+@charset 'utf-8';
+
+@import 'colors';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,800');
+
+// Fonts
+$openSans: 'Open Sans', sans-serif;
+$font-mono: 'Source Code Pro', monospace;
+
+$fontstack-body: $openSans;
+$fontstack-headings: $openSans;
+
+$fontsize-root: 18px;
+
+$fontweight-default: 300;
+$fontweight-bold: 800;
+
+html {
+    font-size: $fontsize-root;
+}
+
+body {
+    font-family: $fontstack-body;
+    font-size: $fontsize-root;
+    font-weight: $fontweight-default;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fontstack-headings;
+    font-weight: $fontweight-default;
+    margin: 0.25em 0;
+
+    i {
+        margin-right: 0.25em;
+    }
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h2 {
+    font-size: 3.8rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+h4 {
+    font-size: 2.1rem;
+}
+
+h5 {
+    font-size: 1.8rem;
+}
+
+h6 {
+    font-size: $fontsize-root;
+}
