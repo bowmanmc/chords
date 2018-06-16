@@ -19,11 +19,11 @@ const Chord = props => {
     return (
         <svg className="Chord" viewBox='0 0 70 100'>
             <g className="Strings">
-                {[0, 1, 2, 3, 4, 5].map(i => {
+                {Array.from({length: numStrings}, (v, i) => i).map(i => {
                     let height = (numFrets + 1) * fretboard.fretSpacing + 1;
                     let x = fretboard.startX + (i * fretboard.stringSpacing);
                     return (
-                        <line className={`string-${i + 1}`}
+                        <line key={i} className={`string-${i + 1}`}
                             x1={x} x2={x}
                             y1={fretboard.startY} y2={height} />
                     );
@@ -33,7 +33,7 @@ const Chord = props => {
                 {[1, 2, 3, 4, 5].map(i => {
                     let y = (fretboard.startY + fretboard.nutSize) + (i * fretboard.fretSpacing);
                     return (
-                        <line
+                        <line key={i}
                             x1={fretboard.startX}
                             x2={fretboard.stringSpacing * numStrings}
                             y1={y} y2={y} />
