@@ -3,13 +3,16 @@ import React from 'react';
 
 const Fretboard = props => {
 
-    const { config } = props;
+    const { chord, config } = props;
+    const { startFret } = chord;
+    const firstFret = startFret || 0;
 
     const transform = `translate(${config.startX}, ${config.startY})`;
 
+    // Should we draw the nut or not? Check for startFret setting
     let nutSize = 0;
     let nut = null;
-    if (config.showNut) {
+    if (firstFret === 0) {
         nutSize = config.nutSize;
         nut = (
             <g className="Nut" transform={transform}>
@@ -26,11 +29,12 @@ const Fretboard = props => {
 
     return (
         <g className="Fretboard">
-            
             <g className="Frets" transform={transform}>
                 {Array.from({length: (config.numFrets + 1)}, (v, i) => i).map(i => {
+                    const fretNum = i + firstFret;
+                    //console.log('drawing fret ' + fretNum);
                     const y = (i * config.fretSpacing) + nutSize;
-                    return <line key={i} x1={0} x2={fretWidth} y1={y} y2={y} />;
+                    return <line className={`fret-${fretNum}`} key={i} x1={0} x2={fretWidth} y1={y} y2={y} />;
                 })}
             </g>
             <g className="Strings" transform={transform}>

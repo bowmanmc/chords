@@ -7,7 +7,6 @@
 .ChordDiagram {
     border: 1px solid $color-blue;
     height: 256px;
-    //margin: 1.0em;
     width: 256px;
 
     text {
@@ -16,15 +15,15 @@
         font-weight: $fontweight-default;
     }
 
-    .FretLabels {
-        text {
-            text-anchor: end;
+    .Fingerings {
+        circle {
+            fill: $color-black;
+            stroke-width: 0;
         }
-    }
 
-    .NutLabels {
         text {
-            text-anchor: middle;
+            fill: $color-white;
+            font-weight: $fontweight-bold;
         }
     }
 
@@ -41,6 +40,20 @@
         }
 
         .Strings {
+        }
+    }
+
+    .Labels {
+        .FretLabels {
+            text {
+                text-anchor: end;
+            }
+        }
+
+        .NutLabels {
+            text {
+                text-anchor: middle;
+            }
         }
     }
 }
