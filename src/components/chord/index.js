@@ -1,53 +1,54 @@
 import React from 'react';
 
+import Fretboard from './Fretboard';
+import Labels from './Labels';
+
 import './index.css';
 
 
-const Chord = props => {
+const ChordDiagram = props => {
 
-    const numStrings = 6;
-    const numFrets = 5;
+    const chord = {
+        name: 'C Major',
+        key: 'C',
+        mod: 'maj',
+        tabs:      ['x','3','2','0','1','0'],
+        //tabs: ['0', 'x', '0', 'x', '0', 'x'],
+        fingering: ['x','3','2','0','1','0']
+    };
 
-    const fretboard = {
+    const fretboardConfig = {
         fretSpacing: 12.5,
+        numFrets: 5,
+        numStrings: 6,
         nutSize: 4,
+        showNut: true,
+        startFret: 1,
         startX: 10,
         startY: 10,
         stringSpacing: 10
     };
 
     return (
-        <svg className="Chord" viewBox='0 0 70 100'>
-            <g className="Strings">
-                {Array.from({length: numStrings}, (v, i) => i).map(i => {
-                    let height = (numFrets + 1) * fretboard.fretSpacing + 1;
-                    let x = fretboard.startX + (i * fretboard.stringSpacing);
+        <svg className="ChordDiagram" viewBox='0 0 70 80'>
+            <g className="Fingers" transform={`translate(${fretboardConfig.startX}, ${fretboardConfig.startY})`}>
+                {chord.tabs.map((tab, i) => {
+                    if (tab === 'x' || tab === '0') {
+                        return null;
+                    }
+                    const fretOffset = Number(tab);
+                    const r = 3;
+                    const x = i * fretboardConfig.stringSpacing;
+                    const y = (fretOffset * fretboardConfig.fretSpacing) + fretboardConfig.nutSize - (fretboardConfig.fretSpacing / 2);// - (fretboardConfig.fretSpacing / 2);
                     return (
-                        <line key={i} className={`string-${i + 1}`}
-                            x1={x} x2={x}
-                            y1={fretboard.startY} y2={height} />
+                        <circle cx={x} cy={y} r={r}/>
                     );
                 })}
             </g>
-            <g className="Frets">
-                {[1, 2, 3, 4, 5].map(i => {
-                    let y = (fretboard.startY + fretboard.nutSize) + (i * fretboard.fretSpacing);
-                    return (
-                        <line key={i}
-                            x1={fretboard.startX}
-                            x2={fretboard.stringSpacing * numStrings}
-                            y1={y} y2={y} />
-                    )
-                })}
-            </g>
-            <g className="Nut">
-                <rect x={fretboard.startX}
-                    y={fretboard.startY}
-                    width={fretboard.stringSpacing * (numStrings - 1)}
-                    height={fretboard.nutSize} />
-            </g>
+            <Labels config={fretboardConfig} tabs={chord.tabs} />
+            <Fretboard config={fretboardConfig} />
         </svg>
     )
 };
 
-export default Chord;
+export default ChordDiagram;

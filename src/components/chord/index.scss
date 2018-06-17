@@ -1,30 +1,46 @@
 @charset 'utf-8';
 
 @import 'defaults/colors';
+@import 'defaults/typography';
 
-.Chord {
+
+.ChordDiagram {
     border: 1px solid $color-blue;
     height: 256px;
-    margin: 1.0em;
+    //margin: 1.0em;
     width: 256px;
 
-    .Frets {
-        line {
-            stroke: $color-black;
-            stroke-linecap: round;
+    text {
+        font-family: $fontstack-body;
+        font-size: 4px; // not really... this is in viewbox size
+        font-weight: $fontweight-default;
+    }
+
+    .FretLabels {
+        text {
+            text-anchor: end;
         }
     }
 
-    .Nut {
-        fill: $color-black;
-        stroke: $color-black;
-        stroke-width: 1;
+    .NutLabels {
+        text {
+            text-anchor: middle;
+        }
     }
 
-    .Strings {
-        line {
-            stroke: $color-black;
-            stroke-linecap: round;
+    .Fretboard {
+        fill: $color-black;
+        stroke: $color-black;
+        stroke-linecap: round;
+        stroke-width: 1;
+
+        .Frets {
+        }
+
+        .Nut {
+        }
+
+        .Strings {
         }
     }
 }

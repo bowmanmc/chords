@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Chord from './components/chord';
+import ChordDiagram from './components/chord';
 import Header from './components/header';
 
 import './App.css';
@@ -12,7 +12,7 @@ class App extends React.Component {
             <div className="App">
                 <Header />
                 <div className="Content">
-                    <Chord />
+                    <ChordDiagram />
                 </div>
             </div>
         );
