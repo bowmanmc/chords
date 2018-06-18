@@ -1,17 +1,24 @@
 @charset 'utf-8';
 
+@import 'defaults/colors';
+
+
 .App {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     min-height: 100vh;
 
-    .Header {
-        height: 50vh;
+    .Filter {
+        background: $color-filterbg;
+        color: $color-filtertxt;
+        flex: 1;
     }
 
-    .Content {
-        display: flex;
-        height: 50vh;
-        overflow-y: scroll;
+    .Details {
+        background: $color-white;
+        //border-left: 1px solid $color-blue;
+        //box-shadow: -3px 0 7px $color-gray-80;
+        padding: 1.0em;
+        width: 33vw;
     }
 }
