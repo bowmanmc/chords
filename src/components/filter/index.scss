@@ -1,3 +1,8 @@
+@charset 'utf-8';
+
+@import 'defaults/colors';
+@import 'defaults/typography';
+
 
 .Filter {
     padding: 1.0em;
@@ -5,8 +10,34 @@
 
 .FilterResults {
 
-    .ChordDiagram {
-        height: 128px;
-        width: 128px;
+    .FilterResult {
+        margin-bottom: 1.5em;
+
+        h2 {
+            font-size: $fontsize-root;
+            font-weight: $fontweight-bold;
+        }
+        .positions {
+            display: flex;
+            flex-wrap: wrap;
+
+            .ChordDiagram {
+                background: transparent;
+                border-radius: 5px;
+                cursor: pointer;
+                height: 64px;
+                width: 64px;
+
+                &:hover {
+                    background: $color-white;
+                }
+
+                circle, line, rect, text {
+                    fill: $color-filtertxt;
+                    stroke: $color-filtertxt;
+                }
+            }
+        }
     }
+
 }

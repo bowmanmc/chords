@@ -11,16 +11,28 @@ import './index.css';
 class Filter extends React.Component {
 
     render() {
-        const chords = ChordDatabase.C.major;
+        const family = ChordDatabase.C;
 
         return (
             <div className="Filter">
-                <p>Filter Here.</p>
+
+                <div className="FilterBox">
+                </div>
 
                 <div className="FilterResults">
-                    {chords.map((chord, i) => {
-                        return <ChordDiagram key={i} chord={chord} />
-                    })}
+                {Object.keys(family).map(chordKey => {
+                    const chord = family[chordKey];
+                    return (
+                        <div className="FilterResult">
+                            <h2>{chord.name}</h2>
+                            <div className="positions">
+                            {chord.positions.map((position, i) => {
+                                return <ChordDiagram key={i} size="small" chord={position} />
+                            })}
+                            </div>
+                        </div>
+                    );
+                })}
                 </div>
             </div>
         );

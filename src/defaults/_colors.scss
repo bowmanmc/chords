@@ -20,10 +20,24 @@ $color-gray-10: #171717;
 $color-black: #000000;
 
 // UI colors
-$color-filterbg: #198A7A;
-$color-filtertxt: #09090A;
-$color-primary: #48A74A;
-$color-primary-alt: #D0DC3F;
+$color-filterbg: $color-gray-98;
+$color-filtertxt: $color-gray-30;
+$color-detailbg: $color-white;
+$color-detailtxt: $color-gray-10;
+$color-primary: #5497E1;
+// $color-filterbg: #030519;
+// $color-filtertxt: $color-gray-80;
+// $color-detailbg: #FCFFF5;
+// $color-detailtxt: #193441;
+// $color-primary: #5497E1;
+// $color-primary: #48A74A;
+// $color-primary-alt: #D0DC3F;
+// $color-filterbg: #D1DBBD;
+// $color-filtertxt: #193441;
+// $color-detailbg: #FCFFF5;
+// $color-detailtxt: #193441;
+// $color-primary: #48A74A;
+// $color-primary-alt: #D0DC3F;
 
 $color-blue: #629cc9;
 $color-dark-blue: #1b2435;

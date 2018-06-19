@@ -21,11 +21,16 @@ const ChordDiagram = props => {
         stringSpacing: 10
     };
 
+    let labels = null;
+    if (props.labels) {
+        labels = <Labels config={fretboardConfig} chord={chord} />;
+    }
+
     return (
         <svg className="ChordDiagram" viewBox='0 0 70 80'>
             <Fretboard config={fretboardConfig} chord={chord} />
-            <Labels config={fretboardConfig} chord={chord} />
-            <Fingerings config={fretboardConfig} chord={chord} />
+            {labels}
+            <Fingerings labels={props.labels} config={fretboardConfig} chord={chord} />
         </svg>
     )
 };
