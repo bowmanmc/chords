@@ -31,14 +31,10 @@ const Fingerings = props => {
                     y -= (config.fretSpacing / 2);
                 }
 
-                let label = null;
-                if (props.labels) {
-                    label = <text alignmentBaseline='middle' textAnchor='middle'>{fingering[i]}</text>
-                }
                 return (
                     <g key={i} className="Fingering" transform={`translate(${x}, ${y})`}>
                         <circle cx={0} cy={0} r={r}/>
-                        {label}
+                        <text alignmentBaseline='middle' textAnchor='middle'>{fingering[i]}</text>
                     </g>
                 );
             })}

@@ -6,6 +6,22 @@ const Labels = props => {
     const { tabs, startFret } = chord;
     const firstFret = startFret || 0;
 
+    let fretLabels = null;
+    if (firstFret > 0) {
+        fretLabels = (
+            <g className="FretLabels" transform={`translate(0, ${config.startY})`}>
+                {Array.from({length: config.numFrets}, (v, i) => i).map(i => {
+                    const fretNum = firstFret === 0 ? (i + 1) : (firstFret + i);
+                    let y = (i * config.fretSpacing) + (config.fretSpacing / 2);
+                    if (firstFret === 0) {
+                        y += config.nutSize;
+                    }
+                    return <text key={i} alignmentBaseline='middle' x={3} y={y}>{fretNum}</text>;
+                })}
+            </g>
+        );
+    }
+
     return (
         <g className="Labels">
             <g className="NutLabels" transform={`translate(${config.startX}, 0)`}>
@@ -20,16 +36,7 @@ const Labels = props => {
                     return null;
                 })}
             </g>
-            <g className="FretLabels" transform={`translate(0, ${config.startY})`}>
-                {Array.from({length: config.numFrets}, (v, i) => i).map(i => {
-                    const fretNum = firstFret === 0 ? (i + 1) : (firstFret + i);
-                    let y = (i * config.fretSpacing) + (config.fretSpacing / 2);
-                    if (firstFret === 0) {
-                        y += config.nutSize;
-                    }
-                    return <text key={i} alignmentBaseline='middle' x={8} y={y}>{fretNum}</text>;
-                })}
-            </g>
+            {fretLabels}
         </g>
     );
 };

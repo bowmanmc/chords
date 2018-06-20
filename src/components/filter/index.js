@@ -23,11 +23,13 @@ class Filter extends React.Component {
                 {Object.keys(family).map(chordKey => {
                     const chord = family[chordKey];
                     return (
-                        <div className="FilterResult">
+                        <div key={chordKey} className="FilterResult">
                             <h2>{chord.name}</h2>
                             <div className="positions">
                             {chord.positions.map((position, i) => {
-                                return <ChordDiagram key={i} size="small" chord={position} />
+                                return <ChordDiagram key={i} chord={position} onClick={() => {
+                                    console.log('You clicked on chord: ' + JSON.stringify(chord) + ' at position: ' + JSON.stringify(position));
+                                }}/>
                             })}
                             </div>
                         </div>
