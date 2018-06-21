@@ -12,24 +12,44 @@
         overflow-x: hidden;
         width: 100vw;
 
+        h2 {
+            color: $color-txt;
+            font-size: 2.0em;
+            font-weight: bold;
+            margin: 0.5em;
+        }
+
         .Positions {
             -webkit-overflow-scrolling: touch;
             display: block;
+            margin-bottom: 1.0em;
             overflow-y: hidden;
+            padding: 0.5em;
             scroll-snap-destination: 0% 100%;
             scroll-snap-points-x: repeat(100%);
             scroll-snap-type: mandatory;
-
             white-space: nowrap;
 
-            .ChordDiagram {
-                //border: 1px solid red;
+            .Position {
                 display: inline-block;
-                height: 100vw;
-                max-height: 320px;
-                max-width: 320px;
+                margin: 0 0.5em;
+                padding: 0.5em;
                 scroll-snap-align: start;
-                width: 100vw;
+
+                .ChordDiagram {
+                    background: lighten($color-bg, 5%);
+                    border-radius: 0.5em;
+                    height: 100vw;
+                    max-height: 320px;
+                    max-width: 320px;
+                    padding: 0.5em;
+                    width: 100vw;
+
+                    line, circle, rect, text {
+                        fill: $color-txt;
+                        stroke: $color-txt;
+                    }
+                }
             }
         }
     }

@@ -20,9 +20,11 @@ class App extends React.Component {
                         <h2>{chord.name}</h2>
                         <div className="Positions">
                         {chord.positions.map((position, i) => {
-                            return <ChordDiagram key={i} chord={position} onClick={() => {
-                                console.log('You clicked on chord: ' + JSON.stringify(chord) + ' at position: ' + JSON.stringify(position));
-                            }}/>
+                            return (
+                                <div className="Position">
+                                    <ChordDiagram key={i} chord={position} />
+                                </div>
+                            );
                         })}
                         </div>
                     </div>
