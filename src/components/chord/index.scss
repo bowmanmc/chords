@@ -14,19 +14,19 @@
 
     .Fingerings {
         circle {
-            fill: $color-black;
+            fill: $color-txt;
             stroke-width: 0;
         }
 
         text {
-            fill: $color-white;
-            font-weight: $fontweight-bold;
+            fill: $color-bg;
+            font-weight: $fontweight-default;
         }
     }
 
     .Fretboard {
-        fill: $color-black;
-        stroke: $color-black;
+        fill: $color-txt;
+        stroke: $color-txt;
         stroke-linecap: round;
         stroke-width: 1;
 
@@ -49,6 +49,7 @@
 
         .NutLabels {
             text {
+                font-weight: $fontweight-bold;
                 text-anchor: middle;
             }
         }

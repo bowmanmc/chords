@@ -34,7 +34,7 @@ const Fingerings = props => {
                 return (
                     <g key={i} className="Fingering" transform={`translate(${x}, ${y})`}>
                         <circle cx={0} cy={0} r={r}/>
-                        <text alignmentBaseline='middle' textAnchor='middle'>{fingering[i]}</text>
+                        <text x={0} y={r/2} textAnchor='middle'>{fingering[i]}</text>
                     </g>
                 );
             })}
