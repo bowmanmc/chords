@@ -16,7 +16,7 @@ const Labels = props => {
                     if (firstFret === 0) {
                         y += config.nutSize;
                     }
-                    return <text key={i} alignmentBaseline='middle' x={3} y={y}>{fretNum}</text>;
+                    return <text key={i} x={3} y={y+1.5}>{fretNum}</text>;
                 })}
             </g>
         );
