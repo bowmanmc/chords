@@ -27,7 +27,7 @@ class App extends React.Component {
                             <div className="Positions">
                             {chord.positions.map((position, i) => {
                                 return (
-                                    <div className="Position">
+                                    <div key={i} className="Position">
                                         <ChordDiagram key={i} chord={position} />
                                     </div>
                                 );
