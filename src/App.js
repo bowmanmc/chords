@@ -10,7 +10,7 @@ import './App.css';
 class App extends React.Component {
 
     render() {
-        const family = ChordDatabase.C;
+        const family = ChordDatabase.G_Sharp;
 
         return (
             <div className="App">
@@ -22,7 +22,7 @@ class App extends React.Component {
                         <div key={chordKey} className="Chord">
                             <div className="ChordMeta">
                                 <h2>{chord.name}</h2>
-                                <p>{chord.positions.length} positions</p>
+                                <p>{chord.shortName} - {chord.positions.length} positions</p>
                             </div>
                             <div className="Positions">
                             {chord.positions.map((position, i) => {
