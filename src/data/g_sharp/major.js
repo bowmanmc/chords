@@ -10,6 +10,7 @@ export default {
         MovableMajor.G(1),
         MovableMajor.E(4),
         MovableMajor.D(6),
+        MovableMajor.C(8),
         MovableMajor.A(11)
     ]
 };
