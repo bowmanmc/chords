@@ -43,6 +43,21 @@ export default {
         }
     },
 
+    C: (s) => {
+        return {
+            startFret: s-1,
+            tabs: [
+                'x',
+                `${Number(s) + 3}`,
+                `${Number(s) + 2}`,
+                s,
+                `${Number(s) + 1}`,
+                s
+            ],
+            fingering: ['x','4','3','1','2','1']
+        };
+    },
+
     D: (s) => {
         return {
             startFret: s - 1,

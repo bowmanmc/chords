@@ -51,9 +51,8 @@ const Header = props => {
                     name='root'
                     options={KEYS}
                     caretIcon={caretIcon}
-                    selectedValue='c'
-                    onChange={() => {console.log('change!');}}
-                    onSubmit={() => {console.log('submit!');}}
+                    selectedValue={props.selected}
+                    onChange={(e) => {props.onRootChange(e.value);}}
                     />
             </div>
         </div>

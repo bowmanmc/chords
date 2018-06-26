@@ -1,8 +1,10 @@
-import C from './c';
-import E from './e';
-import G_Sharp from './g_sharp';
+import c from './c';
+import g_sharp from './g_sharp';
+import a from './a';
 
 
 export default {
-    C, E, G_Sharp
+    c,
+    g_sharp,
+    a
 };

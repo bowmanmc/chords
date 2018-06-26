@@ -9,12 +9,24 @@ import './App.css';
 
 class App extends React.Component {
 
+    constructor(props, context) {
+        super(props, context);
+
+        this.state = {
+            root: 'c'
+        };
+    }
+
     render() {
-        const family = ChordDatabase.G_Sharp;
+        const { root } = this.state;
+
+        const family = ChordDatabase[root];
 
         return (
             <div className="App">
-                <Header />
+                <Header selected={root} onRootChange={(root) => {
+                    this.setState({root});
+                }}/>
                 <div className="Content">
                 {Object.keys(family).map(chordKey => {
                     const chord = family[chordKey];
