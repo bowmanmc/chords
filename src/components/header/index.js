@@ -10,8 +10,6 @@ const caretIcon = (
 );
 
 const KEYS = [{
-    value: 'all', text: 'All'
-}, {
     value: 'c', text: 'C'
 }, {
     value: 'c_sharp', text: 'C♯ / D♭'
