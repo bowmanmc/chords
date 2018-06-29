@@ -1,0 +1,54 @@
+@charset 'utf-8';
+
+@import 'defaults/colors';
+
+
+.Navbar {
+    align-items: center;
+    background: $color-primary;
+    border-bottom: 1px solid $color-primary-alt;
+    box-shadow: 0 0 7px $color-gray-50;
+    color: $color-white;
+    display: flex;
+    left: 0;
+    padding: 1.0em 0.5em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+
+    .Logo {
+        flex: 1;
+    }
+
+    .Menu {
+
+    }
+
+    .MenuButton {
+        align-items: center;
+        background: lighten($color-primary, 7%);
+        border: 1px solid $color-primary-alt;
+        border-radius: 3px;
+        color: $color-white;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        padding: 0.5em;
+        text-align: center;
+
+        svg {
+            fill: $color-white;
+            height: 24px;
+            margin-left: 0.5em;
+            //transition: all 0.35s ease-in-out;
+            width: 24px;
+        }
+    }
+
+    .MenuButton-active {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}

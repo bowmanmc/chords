@@ -1,0 +1,21 @@
+@charset 'utf-8';
+
+@import 'defaults/colors';
+
+
+.Selector {
+    background: $color-primary-alt;
+    max-height: 0;
+    left: 0;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.35s ease-in-out;
+    z-index: 10;
+}
+
+.Selector-active {
+    max-height: 100%;
+    overflow-y: auto;
+}
