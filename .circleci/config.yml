@@ -21,7 +21,9 @@ jobs:
       - run: npm run test
 
       - persist_to_workspace:
-          root: build
+          root: ~/repo
+          paths:
+            - build
 
       - save_cache:
           paths:
