@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 const Labels = props => {
@@ -39,6 +40,11 @@ const Labels = props => {
             {fretLabels}
         </g>
     );
+};
+
+Labels.propTypes = {
+    chord: PropTypes.object.isRequired,
+    config: PropTypes.object.isRequired
 };
 
 export default Labels;

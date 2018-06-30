@@ -4,9 +4,11 @@
 
 
 .Selector {
-    background: $color-primary-alt;
-    max-height: 0;
+    background: lighten($color-primary, 7%);
+    box-shadow: 0 0 7px $color-gray-50;
+    color: $color-white;
     left: 0;
+    max-height: 0;
     overflow-y: hidden;
     position: absolute;
     right: 0;
@@ -18,4 +20,29 @@
 .Selector-active {
     max-height: 100%;
     overflow-y: auto;
+}
+
+.SelectorGroup {
+    margin-top: 85px;
+    padding: 0.5em;
+
+    .GroupName {
+        font-weight: bold;
+    }
+
+    .GroupButtons {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0.5em 0;
+
+        .GroupButton {
+            background: lighten($color-primary, 14%);
+            border: 1px solid $color-primary-alt;
+            border-radius: 3px;
+            color: $color-white;
+            cursor: pointer;
+            margin: 0.25em;
+            padding: 0.25em 0.5em;
+        }
+    }
 }

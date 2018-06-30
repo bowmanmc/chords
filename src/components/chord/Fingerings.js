@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 const Fingerings = props => {
@@ -41,5 +42,10 @@ const Fingerings = props => {
         </g>
     );
 };
-//x={0} y={r/2}
+
+Fingerings.propTypes = {
+    chord: PropTypes.object.isRequired,
+    config: PropTypes.object.isRequired
+};
+
 export default Fingerings;

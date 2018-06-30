@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Fingerings from './Fingerings';
 import Fretboard from './Fretboard';
@@ -22,12 +23,16 @@ const ChordDiagram = props => {
     };
 
     return (
-        <svg className="ChordDiagram" viewBox='0 0 70 80' onClick={props.onClick}>
+        <svg className="ChordDiagram" viewBox='0 0 70 80'>
             <Fretboard config={fretboardConfig} chord={chord} />
             <Labels config={fretboardConfig} chord={chord} />
             <Fingerings config={fretboardConfig} chord={chord} />
         </svg>
     )
+};
+
+ChordDiagram.propTypes = {
+    chord: PropTypes.object.isRequired
 };
 
 export default ChordDiagram;

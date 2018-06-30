@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 const Fretboard = props => {
@@ -50,6 +51,11 @@ const Fretboard = props => {
             {nut}
         </g>
     );
+};
+
+Fretboard.propTypes = {
+    chord: PropTypes.object.isRequired,
+    config: PropTypes.object.isRequired
 };
 
 export default Fretboard;

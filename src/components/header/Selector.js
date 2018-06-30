@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 const KEYS = [{
@@ -27,19 +28,42 @@ const KEYS = [{
     value: 'b', text: 'B'
 }];
 
+
 const Selector = props => {
     let className = 'Selector';
     if (props.active) {
         className += ' Selector-active';
     }
-    console.log('Rendering Selctor with class: ' + className);
+
     return (
         <div className={className}>
-            {KEYS.map(key => {
-                return <div key={key.value} className="Button">{key.text}</div>
-            })}
+            <div className="SelectorGroup">
+                <span className="GroupName">Root Notes</span>
+                <div className="GroupButtons">
+                {KEYS.map(key => {
+                    return (
+                        <div key={key.value}
+                            onClick={() => {
+                                props.onSelect(key.value);
+                            }}
+                            className="GroupButton">
+                            {key.text}
+                        </div>
+                    );
+                })}
+                </div>
+            </div>
         </div>
     )
+};
+
+Selector.propTypes = {
+    active: PropTypes.bool,
+    onSelect: PropTypes.func.isRequired
+};
+
+Selector.defaultProps = {
+    active: false
 };
 
 export default Selector;
