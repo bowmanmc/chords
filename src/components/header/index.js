@@ -10,7 +10,7 @@ import './index.css';
 class Header extends React.Component {
 
     state = {
-        showSelector: true
+        showSelector: false
     }
 
     render() {
@@ -22,6 +22,9 @@ class Header extends React.Component {
                     }));
                 }}/>
                 <Selector
+                    onClose={() => {
+                        this.setState({showSelector: false});
+                    }}
                     onSelect={selection => {
                         this.props.onRootChange(selection);
                         this.setState({showSelector: false});

@@ -31,34 +31,42 @@ const KEYS = [{
 
 const Selector = props => {
     let className = 'Selector';
+    let bgClass = 'SelectorBackground';
     if (props.active) {
         className += ' Selector-active';
+        bgClass = 'SelectorBackground-active';
     }
 
     return (
-        <div className={className}>
-            <div className="SelectorGroup">
-                <span className="GroupName">Root Notes</span>
-                <div className="GroupButtons">
-                {KEYS.map(key => {
-                    return (
-                        <div key={key.value}
-                            onClick={() => {
-                                props.onSelect(key.value);
-                            }}
-                            className="GroupButton">
-                            {key.text}
-                        </div>
-                    );
-                })}
+        <React.Fragment>
+            <div className={className}>
+                <div className="SelectorGroup">
+                    <span className="GroupName">Root Notes</span>
+                    <div className="GroupButtons">
+                    {KEYS.map(key => {
+                        return (
+                            <div key={key.value}
+                                onClick={() => {
+                                    props.onSelect(key.value);
+                                }}
+                                className="GroupButton">
+                                {key.text}
+                            </div>
+                        );
+                    })}
+                    </div>
                 </div>
             </div>
-        </div>
-    )
+            <div className={bgClass} onClick={() => {
+                props.onClose();
+            }}></div>
+        </React.Fragment>
+    );
 };
 
 Selector.propTypes = {
     active: PropTypes.bool,
+    onClose: PropTypes.func.isRequired,
     onSelect: PropTypes.func.isRequired
 };
 
