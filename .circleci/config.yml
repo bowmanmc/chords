@@ -20,8 +20,8 @@ jobs:
           - v1-dependencies-
 
       - run: npm install
-      - run: npm run test
       - run: npm run build
+      - run: npm run test
 
       - store_artifacts:
           path: build
