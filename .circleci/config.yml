@@ -6,20 +6,13 @@ version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:8.5
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
 
     working_directory: ~/repo
 
     steps:
       - checkout
 
-      # Download and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
@@ -27,19 +20,13 @@ jobs:
           - v1-dependencies-
 
       - run: npm install
+      - run: npm run test
       - run: npm run build
+
       - store_artifacts:
           path: build
+
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
-      # run tests!
-      - run: npm test
-
-  deployment:
-    prod:
-      branch: master
-      commands:
-        - aws s3 sync build s3://chords.shredshed.app/ --delete
