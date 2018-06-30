@@ -17,8 +17,12 @@
     top: 0;
     z-index: 1000;
 
-    .Logo {
+    .LogoContainer {
         flex: 1;
+
+        .Logo {
+            height: 42px;
+        }
     }
 
     .Menu {

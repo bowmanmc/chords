@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+@import 'defaults/colors';
+
+.Logo {
+
+    .Pick {
+        fill: $color-primary-alt;
+    }
+
+    .Text {
+        fill: $color-white;
+    }
+}
