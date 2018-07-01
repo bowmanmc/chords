@@ -11,6 +11,7 @@ export default {
         fingering: ['x','0','2','3','1','0']
     },
         MovableMinor.E(5),
+        MovableMinor.G(2),
         MovableMinor.D(7),
         MovableMinor.C(9)
     ]

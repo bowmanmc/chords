@@ -14,6 +14,21 @@ export default {
         };
     },
 
+    G: (s) => {
+        return {
+            startFret: s-1,
+            tabs: [
+                `${Number(s) + 3}`,
+                'x',
+                s,
+                `${Number(s) + 3}`,
+                `${Number(s) + 3}`,
+                'x'
+            ],
+            fingering: ['2','x','1','3','4','x']
+        }
+    },
+
     A: (s) => {
         return {
             startFret: s-1,
@@ -25,7 +40,7 @@ export default {
                 `${Number(s) + 1}`,
                 s
             ],
-            fingering: ['x','0','2','3','1','0']
+            fingering: ['x','1','3','4','2','1']
         };
     },
 
