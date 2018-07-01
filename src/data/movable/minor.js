@@ -1,6 +1,19 @@
 
 export default {
 
+    E: (s) => {
+        return {
+            startFret: s-1,
+            tabs: [
+                s,
+                `${Number(s) + 2}`,
+                `${Number(s) + 2}`,
+                s,s,s
+            ],
+            fingering: ['1','3','4','1','1','1']
+        };
+    },
+
     A: (s) => {
         return {
             startFret: s-1,
@@ -13,19 +26,6 @@ export default {
                 s
             ],
             fingering: ['x','0','2','3','1','0']
-        };
-    },
-
-    E: (s) => {
-        return {
-            startFret: s-1,
-            tabs: [
-                s,
-                `${Number(s) + 2}`,
-                `${Number(s) + 2}`,
-                s,s,s
-            ],
-            fingering: ['1','3','4','1','1','1']
         };
     },
 

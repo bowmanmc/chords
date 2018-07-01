@@ -25,6 +25,7 @@ class App extends React.Component {
         return (
             <div className="App">
                 <Header selected={root} onRootChange={(root) => {
+                    window.scrollTo(0, 0);
                     this.setState({root});
                 }}/>
                 <div className="Content">

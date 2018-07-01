@@ -10,7 +10,7 @@
     left: 0;
     max-height: 0;
     overflow-y: hidden;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     //transition: all 0.35s ease-in-out;
@@ -59,7 +59,7 @@
     background: transparentize($color-black, 0.35);
     bottom: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     z-index: 9;
