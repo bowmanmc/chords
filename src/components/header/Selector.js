@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom'
 
 
 const KEYS = [{
@@ -45,13 +46,12 @@ const Selector = props => {
                     <div className="GroupButtons">
                     {KEYS.map(key => {
                         return (
-                            <div key={key.value}
+                            <Link key={key.value}
+                                to={`/${key.value}`}
                                 onClick={() => {
-                                    props.onSelect(key.value);
+                                    props.onClose();
                                 }}
-                                className="GroupButton">
-                                {key.text}
-                            </div>
+                                className="GroupButton">{key.text}</Link>
                         );
                     })}
                     </div>
@@ -66,8 +66,7 @@ const Selector = props => {
 
 Selector.propTypes = {
     active: PropTypes.bool,
-    onClose: PropTypes.func.isRequired,
-    onSelect: PropTypes.func.isRequired
+    onClose: PropTypes.func.isRequired
 };
 
 Selector.defaultProps = {

@@ -1,0 +1,59 @@
+@charset 'utf-8';
+
+@import 'defaults/colors';
+
+
+$maxChordSize: 420px;
+
+
+.Viewer {
+    padding-top: 110px;
+}
+
+.Chord {
+    overflow-x: hidden;
+    width: 100vw;
+
+    h2 {
+        color: $color-txt;
+        font-size: 2.0em;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .ChordMeta {
+        padding-left: 1.0em;
+    }
+
+    .Positions {
+        -webkit-overflow-scrolling: touch;
+        display: block;
+        margin-bottom: 1.0em;
+        overflow-y: hidden;
+        scroll-snap-destination: 0% 100%;
+        scroll-snap-points-x: repeat(100%);
+        scroll-snap-type: mandatory;
+        white-space: nowrap;
+
+        .Position {
+            display: inline-block;
+            max-width: $maxChordSize;
+            padding: 1.0em;
+            scroll-snap-align: start;
+            scroll-snap-coordinate: 0% 0%;
+
+            .ChordDiagram {
+                background: lighten($color-bg, 5%);
+                border-radius: 0.5em;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

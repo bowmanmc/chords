@@ -11,7 +11,7 @@ class Header extends React.Component {
 
     state = {
         showSelector: false
-    }
+    };
 
     render() {
         return (
@@ -20,23 +20,19 @@ class Header extends React.Component {
                     this.setState(prevState => ({
                         showSelector: !prevState.showSelector
                     }));
-                }}/>
-                <Selector
+                }} />
+
+                <Selector active={this.state.showSelector}
                     onClose={() => {
                         this.setState({showSelector: false});
-                    }}
-                    onSelect={selection => {
-                        this.props.onRootChange(selection);
-                        this.setState({showSelector: false});
-                    }}
-                    active={this.state.showSelector} />
+                    }} />
             </div>
         );
     }
 }
 
 Header.propTypes = {
-    onRootChange: PropTypes.func.isRequired
+    selected: PropTypes.string.isRequired
 };
 
 export default Header;
