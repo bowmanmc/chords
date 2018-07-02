@@ -6,25 +6,25 @@ import { Link } from 'react-router-dom'
 const KEYS = [{
     value: 'c', text: 'C'
 }, {
-    value: 'c_sharp', text: 'C♯ / D♭'
+    value: 'csharp', text: 'C♯ / D♭'
 }, {
     value: 'd', text: 'D'
 }, {
-    value: 'd_sharp', text: 'D♯ / E♭'
+    value: 'dsharp', text: 'D♯ / E♭'
 }, {
     value: 'e', text: 'E'
 }, {
     value: 'f', text: 'F'
 }, {
-    value: 'f_sharp', text: 'F♯ / G♭'
+    value: 'fsharp', text: 'F♯ / G♭'
 }, {
     value: 'g', text: 'G'
 }, {
-    value: 'g_sharp', text: 'G♯ / A♭'
+    value: 'gsharp', text: 'G♯ / A♭'
 }, {
     value: 'a', text: 'A'
 }, {
-    value: 'a_sharp', text: 'A♯ / B♭'
+    value: 'asharp', text: 'A♯ / B♭'
 }, {
     value: 'b', text: 'B'
 }];
@@ -50,6 +50,7 @@ const Selector = props => {
                                 to={`/${key.value}`}
                                 onClick={() => {
                                     props.onClose();
+                                    window.scrollTo(0,0);
                                 }}
                                 className="GroupButton">{key.text}</Link>
                         );
@@ -59,7 +60,7 @@ const Selector = props => {
             </div>
             <div className={bgClass} onClick={() => {
                 props.onClose();
-            }}></div>
+            }} />
         </React.Fragment>
     );
 };
