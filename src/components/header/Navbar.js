@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import Logo from '../logo';
 
@@ -16,7 +17,7 @@ const Navbar = props => {
     return (
         <div className="Navbar">
             <div className="LogoContainer">
-                <Logo />
+                <Link to={'/'}><Logo /></Link>
             </div>
             <div className="Menu">
                 <a className={menuClass} onClick={props.onToggle}>

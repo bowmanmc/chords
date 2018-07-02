@@ -1,10 +1,10 @@
-@charset 'utf-8';
+@charset "utf-8";
 
-@import 'defaults/colors';
+@import "defaults/colors";
 
 
 .Selector {
-    background: $color-primary-20;
+    background: $color-primary;
     box-shadow: 0 0 7px transparentize($color-black, 0.5);
     color: $color-white;
     left: 0;
@@ -27,7 +27,7 @@
     padding: 0.5em;
 
     .GroupName {
-        font-weight: bold;
+        font-weight: normal;
     }
 
     .GroupButtons {
@@ -37,7 +37,7 @@
 
         .GroupButton {
             background: lighten($color-primary-20, 7%);
-            border: 1.5px solid $color-primary;
+            border: 1.5px solid $color-primary-80;
             border-radius: 5px;
             color: $color-white;
             cursor: pointer;

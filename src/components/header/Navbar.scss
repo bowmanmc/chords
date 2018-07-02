@@ -1,11 +1,11 @@
-@charset 'utf-8';
+@charset "utf-8";
 
-@import 'defaults/colors';
+@import "defaults/colors";
 
 
 .Navbar {
     align-items: center;
-    background: $color-primary;
+    background: $color-primary-20;
     border-bottom: 1.5px solid $color-primary-80;
     box-shadow: 0 0 7px transparentize($color-black, 0.5);
     color: $color-white;
@@ -31,7 +31,7 @@
 
     .MenuButton {
         align-items: center;
-        background: $color-primary-20;
+        background: $color-primary;
         border: 1.5px solid $color-primary-80;
         border-radius: 5px;
         color: $color-white;
@@ -42,7 +42,7 @@
         text-align: center;
 
         &:hover {
-            background: lighten($color-primary-20, 7%);
+            background: lighten($color-primary, 7%);
         }
 
         svg {
