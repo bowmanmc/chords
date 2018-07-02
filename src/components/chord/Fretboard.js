@@ -42,7 +42,7 @@ const Fretboard = props => {
                 {Array.from({length: config.numStrings}, (v, i) => i).map(i => {
                     const x = i * config.stringSpacing;
                     return (
-                        <line key={i} className={`string-${i + 1}`}
+                        <line key={i} className={`string-${config.numStrings - i}`}
                             x1={x} x2={x}
                             y1={0} y2={stringHeight} />
                     );

@@ -1,7 +1,7 @@
-@charset 'utf-8';
+@charset "utf-8";
 
-@import 'defaults/colors';
-@import 'defaults/typography';
+@import "defaults/colors";
+@import "defaults/typography";
 
 
 @keyframes dotTransition {
@@ -41,15 +41,34 @@
         fill: $color-txt;
         stroke: $color-txt;
         stroke-linecap: round;
-        stroke-width: 1;
+        stroke-width: 1px;
 
         .Frets {
+            stroke: lighten($color-txt, 20%);
         }
 
         .Nut {
         }
 
         .Strings {
+            .string-6 {
+                stroke-width: 1px;
+            }
+            .string-5 {
+                stroke-width: 0.95px;
+            }
+            .string-4 {
+                stroke-width: 0.85px;
+            }
+            .string-3 {
+                stroke-width: 0.7px;
+            }
+            .string-2 {
+                stroke-width: 0.6px;
+            }
+            .string-1 {
+                stroke-width: 0.5px;
+            }
         }
     }
 
