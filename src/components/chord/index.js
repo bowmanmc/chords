@@ -28,7 +28,7 @@ const ChordDiagram = props => {
             <Labels config={fretboardConfig} chord={chord} />
             <Fingerings config={fretboardConfig} chord={chord} />
         </svg>
-    )
+    );
 };
 
 ChordDiagram.propTypes = {
