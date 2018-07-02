@@ -1,14 +1,14 @@
 import c from './c';
-import csharp from './c-sharp';
+import csharp from './csharp';
 import d from './d';
-import dsharp from './d-sharp';
+import dsharp from './dsharp';
 import e from './e';
 import f from './f';
-import fsharp from './f-sharp';
+import fsharp from './fsharp';
 import g from './g';
-import gsharp from './g-sharp';
+import gsharp from './gsharp';
 import a from './a';
-import asharp from './a-sharp';
+import asharp from './asharp';
 import b from './b';
 
 
