@@ -22,8 +22,11 @@ $color-black: #000000;
 // UI colors
 $color-bg: #F3F3EB;
 $color-txt: #36393c;
+
 $color-primary-20: #304348;
-$color-primary: #69948e;
-$color-primary-80: #96C4AE;
+$color-primary: lighten($color-primary-20, 15%);
+$color-primary-50: lighten($color-primary-20, 30%);
+$color-primary-80: lighten($color-primary-20, 57%);
+
 $color-alt: #AC5144;
 $color-alt-80: #B9594A;

@@ -6,7 +6,7 @@
 .Navbar {
     align-items: center;
     background: $color-primary-20;
-    border-bottom: 1.5px solid $color-primary-80;
+    border-bottom: 1.5px solid $color-primary-50;
     box-shadow: 0 0 7px transparentize($color-black, 0.5);
     color: $color-white;
     display: flex;
@@ -32,7 +32,7 @@
     .MenuButton {
         align-items: center;
         background: $color-primary;
-        border: 1.5px solid $color-primary-80;
+        border: 1.5px solid $color-primary-50;
         border-radius: 5px;
         color: $color-white;
         cursor: pointer;
