@@ -1,4 +1,5 @@
 import MovableMajor from '../movable/major';
+import OpenMajor from '../open/major';
 
 
 export default {
@@ -6,10 +7,8 @@ export default {
     shortName: 'E',
     root: 'E',
     quality: 'major',
-    positions: [{
-        tabs:      ['0','2','2','1','0','0'],
-        fingering: ['0','2','3','1','0','0']
-    },
+    positions: [
+        OpenMajor.E,
         MovableMajor.D(2),
         MovableMajor.C(4),
         MovableMajor.A(7),
