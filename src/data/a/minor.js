@@ -5,7 +5,7 @@ export default {
     name: 'A Minor',
     shortName: 'Am',
     root: 'A',
-    quality: 'm',
+    quality: 'minor',
     positions: [{
         tabs:      ['x','0','2','2','1','0'],
         fingering: ['x','0','2','3','1','0']

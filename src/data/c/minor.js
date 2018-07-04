@@ -5,7 +5,7 @@ export default {
     name: 'C Minor',
     shortName: 'Cm',
     root: 'C',
-    quality: 'm',
+    quality: 'minor',
     positions: [{
         tabs: ['x', '3', '1', '0', '1', 'x'],
         fingering: ['x', '4', '1', '0', '2', 'x']
