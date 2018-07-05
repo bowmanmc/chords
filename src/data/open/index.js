@@ -1,4 +1,5 @@
 import OpenMajor from './major';
+import OpenMinor from './minor';
 
 
 export default {
@@ -15,6 +16,10 @@ export default {
         root: 'E', quality: 'major',
         position: OpenMajor.E
     }, {
+        name: 'E Minor', shortName: 'Em',
+        root: 'E', quality: 'minor',
+        position: OpenMinor.E
+    }, {
         name: 'G Major', shortName: 'G',
         root: 'G', quality: 'major',
         position: OpenMajor.G
@@ -23,6 +28,10 @@ export default {
         root: 'A', quality: 'major',
         position: OpenMajor.A
     }, {
+        name: 'A Minor', shortName: 'Am',
+        root: 'A', quality: 'minor',
+        position: OpenMinor.A
+    }, {
         name: 'C Major', shortName: 'C',
         root: 'C', quality: 'major',
         position: OpenMajor.C
@@ -30,5 +39,9 @@ export default {
         name: 'D Major', shortName: 'D',
         root: 'D', quality: 'major',
         position: OpenMajor.D
+    }, {
+        name: 'D Minor', shortName: 'Dm',
+        root: 'D', quality: 'minor',
+        position: OpenMinor.D
     }]
 };
