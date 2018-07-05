@@ -24,6 +24,11 @@ body {
     font-family: $fontstack-body;
     font-size: $fontsize-root;
     font-weight: $fontweight-default;
+    line-height: 1.5em;
+}
+
+p {
+    max-width: 768px;
 }
 
 h1,

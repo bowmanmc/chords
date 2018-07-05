@@ -11,6 +11,8 @@ import a from './a';
 import asharp from './asharp';
 import b from './b';
 
+import open from './open';
+
 
 export default {
     c, csharp,
@@ -19,5 +21,6 @@ export default {
     f, fsharp,
     g, gsharp,
     a, asharp,
-    b
+    b,
+    open
 };

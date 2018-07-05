@@ -10,7 +10,7 @@ class App extends React.Component {
 
     render() {
 
-        const root = this.props.match.params.chord || 'c';
+        const root = this.props.match.params.chord || 'open';
         //const quality = this.props.match.params.quality;
 
         //console.log(`Rendering Viewer for chord ${root} - ${quality}`);
