@@ -1,4 +1,5 @@
 import MovableMajor from '../movable/major';
+import OpenMajor from "../open/major";
 
 
 export default {
@@ -7,10 +8,10 @@ export default {
     root: 'G♯ / A♭',
     quality: 'major',
     positions: [
-        MovableMajor.G(1),
-        MovableMajor.E(4),
-        MovableMajor.D(6),
-        MovableMajor.C(8),
-        MovableMajor.A(11)
+        MovableMajor.E1(4),
+        MovableMajor.E2(4),
+        MovableMajor.D1(6),
+        MovableMajor.A1(11),
+        MovableMajor.A2(11)
     ]
 };

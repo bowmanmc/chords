@@ -9,9 +9,9 @@ export default {
     quality: 'major',
     positions: [
         OpenMajor.C,
-        MovableMajor.A(3),
-        MovableMajor.G(5),
-        MovableMajor.E(8),
-        MovableMajor.D(10)
+        MovableMajor.A1(3),
+        MovableMajor.E1(8),
+        MovableMajor.E2(8),
+        MovableMajor.D1(10)
     ]
 };

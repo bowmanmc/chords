@@ -7,10 +7,10 @@ export default {
     root: 'B',
     quality: 'major',
     positions: [
-        MovableMajor.A(2),
-        MovableMajor.G(4),
-        MovableMajor.E(7),
-        MovableMajor.D(9),
-        MovableMajor.C(11)
+        MovableMajor.A1(2),
+        MovableMajor.E1(7),
+        MovableMajor.E2(7),
+        MovableMajor.D1(9),
+        MovableMajor.A2(14)
     ]
 };

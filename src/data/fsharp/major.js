@@ -7,10 +7,10 @@ export default {
     root: 'F♯ / G♭',
     quality: 'major',
     positions: [
-        MovableMajor.E(2),
-        MovableMajor.D(4),
-        MovableMajor.C(6),
-        MovableMajor.A(9),
-        MovableMajor.G(11)
+        MovableMajor.E1(2),
+        MovableMajor.D1(4),
+        MovableMajor.A1(9),
+        MovableMajor.A2(9),
+        MovableMajor.E2(14)
     ]
 };
