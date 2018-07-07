@@ -51,6 +51,9 @@ const Selector = props => {
                                 onClick={() => {
                                     props.onClose();
                                     window.scrollTo(0,0);
+                                    Array.from(document.getElementsByClassName("Positions")).forEach(el => {
+                                        el.scrollLeft = 0;
+                                    });
                                 }}
                                 className="GroupButton">{key.text}</Link>
                         );
