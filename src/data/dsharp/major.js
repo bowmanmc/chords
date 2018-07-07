@@ -1,5 +1,4 @@
 import MovableMajor from '../movable/major';
-import OpenMajor from "../open/major";
 
 
 export default {
