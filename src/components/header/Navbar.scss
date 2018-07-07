@@ -34,7 +34,7 @@
         background: $color-primary;
         border: 1.5px solid $color-primary-80;
         border-radius: 5px;
-        color: $color-white;
+        color: $color-txt-light;
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -42,14 +42,14 @@
         text-align: center;
 
         &:hover {
-            background: lighten($color-primary, 7%);
+            background: $color-primary-80;
+            color: $color-white;
         }
 
         svg {
             fill: $color-white;
             height: 24px;
             margin-left: 0.5em;
-            //transition: all 0.35s ease-in-out;
             width: 24px;
         }
     }
