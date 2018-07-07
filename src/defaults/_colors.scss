@@ -20,13 +20,15 @@ $color-gray-10: #171717;
 $color-black: #000000;
 
 // UI colors
-$color-bg: #F9F8F2;
-$color-txt: #36393c;
+$color-bg: #F6F3F0;
+$color-txt: #363538;
+$color-txt-light: $color-bg;
+$color-bright: lighten($color-txt-light, 13%);
 
-$color-primary-20: #304348;
-$color-primary: lighten($color-primary-20, 15%);
-$color-primary-50: lighten($color-primary-20, 30%);
-$color-primary-80: lighten($color-primary-20, 57%);
+$color-dark: #2A303D;
+$color-dark-dark: darken(#2A303D, 9%);
 
-$color-alt: #AC5144;
-$color-alt-80: #B9594A;
+$color-primary: #B85949;
+$color-primary-20: darken($color-primary, 7%);
+$color-primary-80: #DBA350;
+

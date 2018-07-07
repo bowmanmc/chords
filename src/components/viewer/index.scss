@@ -31,7 +31,7 @@ $maxChordSize: 420px;
     flex-wrap: wrap;
 
     .Chord {
-        max-width: 256px;
+        max-width: $maxChordSize;
     }
 }
 
@@ -72,7 +72,7 @@ $maxChordSize: 420px;
         scroll-snap-coordinate: 0% 0%;
 
         .ChordDiagram {
-            background: lighten($color-bg, 5%);
+            background: $color-bright;
             border-radius: 0.5em;
             height: 100%;
             width: 100%;

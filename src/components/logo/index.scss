@@ -6,10 +6,28 @@
 .Logo {
 
     .Pick {
-        fill: $color-alt-80;
+        fill: $color-primary;
+    }
+
+    .Guitar {
+        fill: $color-primay-80;
     }
 
     .Text {
-        fill: $color-white;
+        fill: $color-bright;
     }
+
+    #Telecaster {
+
+    }
+
+    #Stratocaster {
+        display: none;
+    }
+
+    #LesPaul {
+        display: none;
+    }
+
+
 }

@@ -4,7 +4,7 @@
 
 
 .Selector {
-    background: $color-primary;
+    background: $color-dark;
     box-shadow: 0 0 7px transparentize($color-black, 0.5);
     color: $color-white;
     left: 0;
@@ -36,7 +36,7 @@
         padding: 0.5em 0;
 
         .GroupButton {
-            background: lighten($color-primary-20, 7%);
+            background: $color-primary-20;
             border: 1.5px solid $color-primary-80;
             border-radius: 5px;
             color: $color-white;
