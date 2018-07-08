@@ -7,10 +7,10 @@ export default {
     root: 'B',
     quality: 'minor',
     positions: [
-        MovableMinor.A(2),
-        MovableMinor.E(7),
-        MovableMinor.G(4),
-        MovableMinor.D(9),
-        MovableMinor.C(11)
+        MovableMinor.A1(2),
+        MovableMinor.E1(7),
+        MovableMinor.E2(7),
+        MovableMinor.D1(9),
+        MovableMinor.A2(14)
     ]
 };

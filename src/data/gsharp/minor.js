@@ -7,10 +7,10 @@ export default {
     root: 'G♯ / A♭',
     quality: 'minor',
     positions: [
-        MovableMinor.G(1),
-        MovableMinor.E(4),
-        MovableMinor.D(6),
-        MovableMinor.A(11),
-        MovableMinor.C(8),
+        MovableMinor.E1(4),
+        MovableMinor.E2(4),
+        MovableMinor.D1(6),
+        MovableMinor.A1(11),
+        MovableMinor.A2(11)
     ]
 };

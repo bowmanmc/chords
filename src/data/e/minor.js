@@ -10,9 +10,9 @@ export default {
         tabs:      ['0','2','2','0','0','0'],
         fingering: ['0','1','2','0','0','0']
     },
-        MovableMinor.D(2),
-        MovableMinor.A(7),
-        MovableMinor.C(4),
-        MovableMinor.G(9)
+        MovableMinor.D1(2),
+        MovableMinor.A1(7),
+        MovableMinor.A2(7),
+        MovableMinor.E2(12)
     ]
 };

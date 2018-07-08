@@ -1,75 +1,73 @@
 
 export default {
 
-    E: (s) => {
+    E1: (r) => {
         return {
-            startFret: s-1,
+            startFret: r-1,
             tabs: [
-                s,
-                `${Number(s) + 2}`,
-                `${Number(s) + 2}`,
-                s,s,s
+                r,
+                `${Number(r) + 2}`,
+                `${Number(r) + 2}`,
+                r, r, r
             ],
             fingering: ['1','3','4','1','1','1']
         };
     },
 
-    G: (s) => {
+    E2: (r) => {
         return {
-            startFret: s-1,
+            startFret: r-4,
             tabs: [
-                `${Number(s) + 3}`,
+                r,
                 'x',
-                s,
-                `${Number(s) + 3}`,
-                `${Number(s) + 3}`,
-                'x'
+                `${Number(r) - 3}`,
+                r, r, 'x'
             ],
             fingering: ['2','x','1','3','4','x']
         }
     },
 
-    A: (s) => {
+    A1: (r) => {
         return {
-            startFret: s-1,
+            startFret: r-1,
             tabs: [
                 'x',
-                s,
-                `${Number(s) + 2}`,
-                `${Number(s) + 2}`,
-                `${Number(s) + 1}`,
-                s
+                r,
+                `${Number(r) + 2}`,
+                `${Number(r) + 2}`,
+                `${Number(r) + 1}`,
+                r
             ],
             fingering: ['x','1','3','4','2','1']
         };
     },
 
-    D: (s) => {
+    A2: (r) => {
         return {
-            startFret: s-1,
-            tabs: [
-                'x','x',
-                s,
-                `${Number(s) + 2}`,
-                `${Number(s) + 3}`,
-                `${Number(s) + 1}`,
-            ],
-            fingering: ['x','x','1','3','4','2']
-        }
-    },
-
-    C: (s) => {
-        return {
-            startFret: s-1,
+            startFret: r-4,
             tabs: [
                 'x',
-                `${Number(s) + 3}`,
-                `${Number(s) + 1}`,
-                s,
-                `${Number(s) + 1}`,
+                r,
+                `${Number(r) - 2}`,
+                `${Number(r) - 3}`,
+                `${Number(r) - 2}`,
                 'x'
             ],
             fingering: ['x','4','2','1','3','x']
         };
+    },
+
+    D1: (r) => {
+        return {
+            startFret: r-1,
+            tabs: [
+                'x','x',
+                r,
+                `${Number(r) + 2}`,
+                `${Number(r) + 3}`,
+                `${Number(r) + 1}`,
+            ],
+            fingering: ['x','x','1','3','4','2']
+        }
     }
 };
