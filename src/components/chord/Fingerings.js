@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Ties from './Ties';
+import utils from './utils';
+
 
 const Fingerings = props => {
     const { chord, config } = props;
@@ -15,6 +18,9 @@ const Fingerings = props => {
     const r = 3; // circle radius
 
     const transform = `translate(${config.startX}, ${config.startY})`;
+
+    let ties = utils.calculateTies(fingering, tabs);
+    console.log('Ties: ' + JSON.stringify(ties));
 
     return (
         <g className="Fingerings" transform={transform}>
@@ -39,6 +45,7 @@ const Fingerings = props => {
                     </g>
                 );
             })}
+            <Ties ties={ties} config={config} />
         </g>
     );
 };
@@ -49,3 +56,9 @@ Fingerings.propTypes = {
 };
 
 export default Fingerings;
+
+/*
+<g className="tie" transform={'translate(0, 0)'}>
+    <path d="M19.8,0C8.8,0-0.1,3.7,0,3.8c2.5-0.9,9.5-3.1,19.8-3.1s17.3,2.2,19.8,3.1C39.7,3.8,30.8,0,19.8,0z" />
+</g>
+*/
