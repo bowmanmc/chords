@@ -15,12 +15,11 @@ const Fingerings = props => {
         nutSize = config.nutSize;
     }
 
-    const r = 3; // circle radius
+    const r = config.fingeringRadius;
 
     const transform = `translate(${config.startX}, ${config.startY})`;
 
     let ties = utils.calculateTies(fingering, tabs);
-    console.log('Ties: ' + JSON.stringify(ties));
 
     return (
         <g className="Fingerings" transform={transform}>
@@ -45,7 +44,7 @@ const Fingerings = props => {
                     </g>
                 );
             })}
-            <Ties ties={ties} config={config} />
+            <Ties ties={ties} config={config} firstFret={firstFret} />
         </g>
     );
 };

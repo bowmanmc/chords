@@ -35,6 +35,11 @@
             fill: $color-bg;
             font-weight: $fontweight-default;
         }
+
+        path {
+            fill: $color-txt;
+            stroke-width: 0;
+        }
     }
 
     .Fretboard {

@@ -13,6 +13,7 @@ const ChordDiagram = props => {
     const { chord } = props;
 
     const fretboardConfig = {
+        fingeringRadius: 3,
         fretSpacing: 12.5,
         numFrets: 5,
         numStrings: 6,
