@@ -47,7 +47,7 @@ const Navbar = props => {
 };
 
 Navbar.propTypes = {
-    active: PropTypes.string.isRequired,
+    active: PropTypes.string,
     onToggleSelector: PropTypes.func.isRequired
 };
 
