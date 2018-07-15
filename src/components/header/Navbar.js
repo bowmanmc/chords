@@ -9,10 +9,16 @@ const CARET = <svg viewBox="0 0 448 512"><path d="M448 80v352c0 26.5-21.5 48-48 
 
 const Navbar = props => {
 
-    let menuClass = 'MenuButton';
-    if (props.active) {
-        menuClass += ' MenuButton-active';
-    }
+    const a = props.active;
+
+    const menuItemClickHandler = (selected) => {
+        if (a === selected) {
+            props.onToggleSelector(null);
+        }
+        else {
+            props.onToggleSelector(selected);
+        }
+    };
 
     return (
         <div className="Navbar">
@@ -20,17 +26,29 @@ const Navbar = props => {
                 <Link to={'/'}><Logo /></Link>
             </div>
             <div className="Menu">
-                <a className={menuClass} onClick={props.onToggle}>
-                    Menu
-                    {CARET}
-                </a>
+                <div className={a === 'collections' ? 'MenuItem MenuItem__selected' : 'MenuItem'}
+                    onClick={() => { menuItemClickHandler('collections'); }}>
+                    {CARET} Collections
+                </div>
+                <div className={a === 'root' ? 'MenuItem MenuItem__selected' : 'MenuItem'}
+                    onClick={() => { menuItemClickHandler('root'); }}>
+                    {CARET} C
+                </div>
+                <div className={a === 'quality' ? 'MenuItem MenuItem__selected' : 'MenuItem'}
+                    onClick={() => { menuItemClickHandler('quality'); }}>
+                    {CARET} all
+                </div>
+                <div className="MenuItem MenuItem__fill"
+                     onClick={() => { menuItemClickHandler(null); }}>
+                </div>
             </div>
         </div>
     );
 };
 
 Navbar.propTypes = {
-    onToggle: PropTypes.func.isRequired
+    active: PropTypes.string.isRequired,
+    onToggleSelector: PropTypes.func.isRequired
 };
 
 export default Navbar;
