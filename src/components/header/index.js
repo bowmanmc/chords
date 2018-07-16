@@ -10,7 +10,7 @@ import './index.css';
 class Header extends React.Component {
 
     state = {
-        activeSelector: 'collections'
+        activeSelector: null
     };
 
     render() {
@@ -22,9 +22,9 @@ class Header extends React.Component {
                     });
                 }} />
 
-                <Selector active={this.state.showSelector}
+                <Selector active={this.state.activeSelector}
                     onClose={() => {
-                        this.setState({showSelector: false});
+                        this.setState({activeSelector: false});
                     }} />
             </div>
         );

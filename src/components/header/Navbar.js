@@ -26,20 +26,10 @@ const Navbar = props => {
                 <Link to={'/'}><Logo /></Link>
             </div>
             <div className="Menu">
-                <div className={a === 'collections' ? 'MenuItem MenuItem__selected' : 'MenuItem'}
-                    onClick={() => { menuItemClickHandler('collections'); }}>
-                    {CARET} Collections
-                </div>
-                <div className={a === 'root' ? 'MenuItem MenuItem__selected' : 'MenuItem'}
-                    onClick={() => { menuItemClickHandler('root'); }}>
-                    {CARET} C
-                </div>
-                <div className={a === 'quality' ? 'MenuItem MenuItem__selected' : 'MenuItem'}
-                    onClick={() => { menuItemClickHandler('quality'); }}>
-                    {CARET} all
-                </div>
-                <div className="MenuItem MenuItem__fill"
-                     onClick={() => { menuItemClickHandler(null); }}>
+                <div className="MenuItem__fill" onClick={() => { menuItemClickHandler(null); }}>&nbsp;</div>
+                <div className={a === 'menu' ? 'MenuItem MenuItem__selected' : 'MenuItem'}
+                    onClick={() => { menuItemClickHandler('menu'); }}>
+                    {CARET} Menu
                 </div>
             </div>
         </div>
