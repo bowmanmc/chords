@@ -10,21 +10,21 @@ import './index.css';
 class Header extends React.Component {
 
     state = {
-        showSelector: false
+        activeSelector: null
     };
 
     render() {
         return (
             <div className="Header">
-                <Navbar active={this.state.showSelector} onToggle={() => {
-                    this.setState(prevState => ({
-                        showSelector: !prevState.showSelector
-                    }));
+                <Navbar active={this.state.activeSelector} onToggleSelector={(selector) => {
+                    this.setState({
+                        activeSelector: selector
+                    });
                 }} />
 
-                <Selector active={this.state.showSelector}
+                <Selector active={this.state.activeSelector}
                     onClose={() => {
-                        this.setState({showSelector: false});
+                        this.setState({activeSelector: false});
                     }} />
             </div>
         );
