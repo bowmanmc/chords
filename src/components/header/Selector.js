@@ -27,7 +27,7 @@ const Selector = props => {
                     <div className="GroupButtons">
                         <span>
                             <Link to={'/open'} onClick={resetScroll} className="GroupButton">Open Chords</Link>
-                            <Link to={'/barre'} onClick={resetScroll} className="GroupButton">Barre Chords</Link>
+                            {/*<Link to={'/barre'} onClick={resetScroll} className="GroupButton">Barre Chords</Link>*/}
                         </span>
                     </div>
                 </div>
