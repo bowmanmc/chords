@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 
 const Labels = props => {
-    const { chord, config } = props;
+    const { chord, config, hideFretLabels } = props;
     const { tabs, startFret } = chord;
     const firstFret = startFret || 0;
 
     let fretLabels = null;
-    if (firstFret > 0) {
+    if (firstFret > 0 && !hideFretLabels) {
         fretLabels = (
             <g className="FretLabels" transform={`translate(0, ${config.startY})`}>
                 {Array.from({length: config.numFrets}, (v, i) => i).map(i => {

@@ -10,7 +10,7 @@ import './index.css';
 
 const ChordDiagram = props => {
 
-    const { chord } = props;
+    const { chord, hideFretLabels } = props;
 
     const fretboardConfig = {
         fingeringRadius: 3,
@@ -26,7 +26,7 @@ const ChordDiagram = props => {
     return (
         <svg className="ChordDiagram" viewBox='0 0 70 80'>
             <Fretboard config={fretboardConfig} chord={chord} />
-            <Labels config={fretboardConfig} chord={chord} />
+            <Labels hideFretLabels={hideFretLabels} config={fretboardConfig} chord={chord} />
             <Fingerings config={fretboardConfig} chord={chord} />
         </svg>
     );

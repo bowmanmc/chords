@@ -15,13 +15,17 @@ const ChordCollectionViewer = (props) => {
             </div>
             <div className="Chords">
             {collection.chords.map((chord, i) => {
+                let sn = null;
+                if (chord.shortName) {
+                    sn = `(${chord.shortName})`;
+                }
                 return (
                     <div key={chord.shortName} className="Chord">
                         <div className="ChordMeta">
-                            <h3>{chord.name} ({chord.shortName})</h3>
+                            <h3>{chord.name} {sn}</h3>
                         </div>
                         <div key={i} className="Position">
-                            <ChordDiagram key={i} chord={chord.position} />
+                            <ChordDiagram hideFretLabels={chord.hideFretLabels} key={i} chord={chord.position} />
                         </div>
                     </div>
                 )
