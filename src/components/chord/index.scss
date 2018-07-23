@@ -40,6 +40,20 @@
             fill: $color-txt;
             stroke-width: 0;
         }
+
+        .Root {
+            circle {
+                fill: $color-dark;
+                stroke: $color-primary-80;
+                stroke-width: 0.35px;
+            }
+        }
+
+        .Tie {
+            path {
+                fill: $color-black;
+            }
+        }
     }
 
     .Fretboard {

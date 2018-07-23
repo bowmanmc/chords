@@ -21,12 +21,19 @@ const Fingerings = props => {
 
     let ties = utils.calculateTies(fingering, tabs);
 
+    let firstNote = true;
+
     return (
         <g className="Fingerings" transform={transform}>
             {tabs.map((tab, i) => {
-                if (tab === 'x' || tab === '0') {
+                if (tab === 'x') {
                     return null;
                 }
+                if (tab === '0') {
+                    firstNote = false;
+                    return null;
+                }
+
                 const fretOffset = Number(tab) - firstFret;
                 const x = i * config.stringSpacing;
                 let y = (fretOffset * config.fretSpacing) + nutSize;
@@ -37,8 +44,13 @@ const Fingerings = props => {
                     y -= (config.fretSpacing / 2);
                 }
 
+                let className = "Fingering";
+                if (firstNote) {
+                    className = "Fingering Root";
+                }
+                firstNote = false;
                 return (
-                    <g key={i} className="Fingering" transform={`translate(${x}, ${y})`}>
+                    <g key={i} className={className} transform={`translate(${x}, ${y})`}>
                         <circle cx={0} cy={0} r={r}/>
                         <text x={0} y={r/2} textAnchor='middle'>{fingering[i]}</text>
                     </g>
