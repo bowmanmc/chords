@@ -2,7 +2,7 @@ import MovableMajor from '../movable/major';
 import OpenMajor from '../open/major';
 
 
-export default {
+export default [{
     name: 'C Major',
     shortName: 'C',
     root: 'C',
@@ -14,4 +14,4 @@ export default {
         MovableMajor.E2(8),
         MovableMajor.D1(10)
     ]
-};
+}];

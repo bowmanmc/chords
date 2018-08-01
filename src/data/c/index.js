@@ -4,6 +4,18 @@ import minor from './minor';
 import minor7 from './minor7';
 import seventh from './seventh';
 
+// export default {
+//     major, minor, seventh, major7, minor7
+// };
+
 export default {
-    major, minor, seventh, major7, minor7
-};
+    type: 'collection',
+    name: 'C',
+    chords: {
+        major: major,
+        minor: minor,
+        seventh: seventh,
+        major7: major7,
+        minor7: minor7
+    }
+}
