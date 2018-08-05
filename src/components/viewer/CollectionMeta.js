@@ -5,14 +5,19 @@ import PropTypes from 'prop-types';
 const CollectionMeta = (props) => {
     const { collection } = props;
 
-    if (!collection || !collection.description) {
+    if (!collection || !collection.name) {
         return null;
+    }
+
+    let description = null;
+    if (collection.description) {
+        description = (<p>{collection.description}</p>);
     }
 
     return (
         <div className="CollectionMeta">
             <h1>{collection.name}</h1>
-            <p>{collection.description}</p>
+            {description}
         </div>
     );
 };

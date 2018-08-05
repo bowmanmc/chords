@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import ChordDatabase from '../../data';
 
 import CollectionMeta from './CollectionMeta';
-import FamilyViewer from './FamilyViewer';
+import ChordList from './ChordList';
+
 
 import './index.css';
 
@@ -22,16 +23,20 @@ const Viewer = (props) => {
         );
     }
 
-    // Families are sub-collections under the chords attribute... things like
-    // major, minor, etc...
-    const families = Object.keys(collection.chords);
+    let items = collection;
+    if (!Array.isArray(collection)) {
+        items = [collection];
+    }
 
     return (
         <div className="Viewer">
-            <CollectionMeta collection={collection} />
-            {families.map(familyKey => {
-                const family = collection.chords[familyKey];
-                return <FamilyViewer key={familyKey} family={family} />
+            {items.map((item, i) => {
+                return (
+                    <React.Fragment key={i}>
+                        <CollectionMeta collection={item} />
+                        <ChordList chords={item.chords} />
+                    </React.Fragment>
+                );
             })}
         </div>
     );

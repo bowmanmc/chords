@@ -51,7 +51,8 @@
 
         .Tie {
             path {
-                fill: lighten($color-dark, 20%);
+                //fill: lighten($color-dark, 20%);
+                fill: $color-dark;
             }
         }
     }

@@ -8,11 +8,11 @@ $chordSize: 420px;
 
 .Viewer {
     color: $color-txt;
-    padding: 85px 1.0em 1.0em 1.0em;
+    padding-top: 85px;
 }
 
 .CollectionMeta {
-    margin-bottom: 1.0em;
+    padding: 1.0em;
 
     h1 {
         font-size: 2.0em;
@@ -22,78 +22,36 @@ $chordSize: 420px;
     }
 }
 
-.FamilyViewer {
-
-}
-
 .ChordMeta {
     h2 {
         font-size: 1.5em;
         font-weight: bold;
+        margin: 0;
+        text-align: center;
     }
 }
 
-.ChordPositions {
-    border: 1px solid red;
-    display: flex;
-    flex-wrap: nowrap;
+.ChordList {
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    margin-bottom: 1.0em;
+    overflow-y: hidden;
+    scroll-snap-destination: 0% 100%;
+    scroll-snap-points-x: repeat(100);
+    scroll-snap-type: mandatory;
+    white-space: nowrap;
+    width: 100vw;
 
-    .ChordPosition {
+    .Chord {
+        display: inline-block;
+        scroll-snap-align: start;
+        scroll-snap-coordinate: 0% 0%;
         width: $chordSize;
+
+        .ChordDiagram {
+            background: $color-white;
+            border-radius: 0.5em;
+            margin: 1.0em;
+        }
     }
 }
-
-// CollectionViewer
-//.Chords {
-//    display: flex;
-//    flex-wrap: wrap;
-//
-//    .Chord {
-//        max-width: $maxChordSize;
-//    }
-//}
-//
-//.CollectionInfo {
-//    padding: 0 1.0em;
-//}
-//
-//// ChordFamily and Collection Viewers
-//.Chord {
-//    overflow-x: hidden;
-//    width: 100vw;
-//
-//    p {
-//        margin: 0;
-//        padding: 0;
-//    }
-//
-//    .ChordMeta {
-//        padding-left: 1.0em;
-//    }
-//
-//    .Positions {
-//        -webkit-overflow-scrolling: touch;
-//        display: block;
-//        margin-bottom: 1.0em;
-//        overflow-y: hidden;
-//        scroll-snap-destination: 0% 100%;
-//        scroll-snap-points-x: repeat(100%);
-//        scroll-snap-type: mandatory;
-//        white-space: nowrap;
-//    }
-//
-//    .Position {
-//        display: inline-block;
-//        max-width: $maxChordSize;
-//        padding: 1.0em;
-//        scroll-snap-align: start;
-//        scroll-snap-coordinate: 0% 0%;
-//
-//        .ChordDiagram {
-//            background: $color-bright;
-//            border-radius: 0.5em;
-//            height: 100%;
-//            width: 100%;
-//        }
-//    }
-//}
