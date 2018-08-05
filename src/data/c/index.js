@@ -9,13 +9,11 @@ import seventh from './seventh';
 // };
 
 export default {
-    type: 'collection',
-    name: 'C',
     chords: {
-        major: major,
-        minor: minor,
-        seventh: seventh,
-        major7: major7,
-        minor7: minor7
+        major: [major],
+        minor: [minor],
+        seventh: [seventh],
+        major7: [major7],
+        minor7: [minor7]
     }
 }

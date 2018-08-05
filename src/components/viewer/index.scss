@@ -3,80 +3,97 @@
 @import "defaults/colors";
 
 
-$maxChordSize: 420px;
+$chordSize: 420px;
 
 
 .Viewer {
-    padding-top: 110px;
+    color: $color-txt;
+    padding: 85px 1.0em 1.0em 1.0em;
+}
 
-    h2 {
-        color: $color-txt;
+.CollectionMeta {
+    margin-bottom: 1.0em;
+
+    h1 {
         font-size: 2.0em;
         font-weight: bold;
         margin: 0;
-        margin-bottom: 0.25em;
         padding: 0;
     }
+}
 
-    h3 {
-        color: $color-txt;
+.FamilyViewer {
+
+}
+
+.ChordMeta {
+    h2 {
         font-size: 1.5em;
-        margin: 0;
-        padding: 0;
+        font-weight: bold;
+    }
+}
+
+.ChordPositions {
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: nowrap;
+
+    .ChordPosition {
+        width: $chordSize;
     }
 }
 
 // CollectionViewer
-.Chords {
-    display: flex;
-    flex-wrap: wrap;
-
-    .Chord {
-        max-width: $maxChordSize;
-    }
-}
-
-.CollectionInfo {
-    padding: 0 1.0em;
-}
-
-// ChordFamily and Collection Viewers
-.Chord {
-    overflow-x: hidden;
-    width: 100vw;
-
-    p {
-        margin: 0;
-        padding: 0;
-    }
-
-    .ChordMeta {
-        padding-left: 1.0em;
-    }
-
-    .Positions {
-        -webkit-overflow-scrolling: touch;
-        display: block;
-        margin-bottom: 1.0em;
-        overflow-y: hidden;
-        scroll-snap-destination: 0% 100%;
-        scroll-snap-points-x: repeat(100%);
-        scroll-snap-type: mandatory;
-        white-space: nowrap;
-    }
-
-    .Position {
-        display: inline-block;
-        max-width: $maxChordSize;
-        padding: 1.0em;
-        scroll-snap-align: start;
-        scroll-snap-coordinate: 0% 0%;
-
-        .ChordDiagram {
-            background: $color-bright;
-            border-radius: 0.5em;
-            height: 100%;
-            width: 100%;
-        }
-    }
-}
+//.Chords {
+//    display: flex;
+//    flex-wrap: wrap;
+//
+//    .Chord {
+//        max-width: $maxChordSize;
+//    }
+//}
+//
+//.CollectionInfo {
+//    padding: 0 1.0em;
+//}
+//
+//// ChordFamily and Collection Viewers
+//.Chord {
+//    overflow-x: hidden;
+//    width: 100vw;
+//
+//    p {
+//        margin: 0;
+//        padding: 0;
+//    }
+//
+//    .ChordMeta {
+//        padding-left: 1.0em;
+//    }
+//
+//    .Positions {
+//        -webkit-overflow-scrolling: touch;
+//        display: block;
+//        margin-bottom: 1.0em;
+//        overflow-y: hidden;
+//        scroll-snap-destination: 0% 100%;
+//        scroll-snap-points-x: repeat(100%);
+//        scroll-snap-type: mandatory;
+//        white-space: nowrap;
+//    }
+//
+//    .Position {
+//        display: inline-block;
+//        max-width: $maxChordSize;
+//        padding: 1.0em;
+//        scroll-snap-align: start;
+//        scroll-snap-coordinate: 0% 0%;
+//
+//        .ChordDiagram {
+//            background: $color-bright;
+//            border-radius: 0.5em;
+//            height: 100%;
+//            width: 100%;
+//        }
+//    }
+//}

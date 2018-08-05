@@ -16,13 +16,14 @@ import open from './open';
 
 
 export default {
-    c, csharp,
-    d, dsharp,
-    e,
-    f, fsharp,
-    g, gsharp,
-    a, asharp,
-    b,
+    c,
+    // csharp,
+    // d, dsharp,
+    // e,
+    // f, fsharp,
+    // g, gsharp,
+    // a, asharp,
+    // b,
     open,
     barre
 };
