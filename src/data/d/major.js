@@ -3,15 +3,18 @@ import OpenMajor from '../open/major';
 
 
 export default {
-    name: 'D Major',
-    shortName: 'D',
+    name: 'D Major (D)',
     root: 'D',
     quality: 'major',
-    positions: [
-        OpenMajor.D,
-        MovableMajor.A1(5),
-        MovableMajor.A2(5),
-        MovableMajor.E1(10),
-        MovableMajor.E2(10)
-    ]
+    chords: [{
+        position: OpenMajor.D
+    }, {
+        position: MovableMajor.A1(5)
+    }, {
+        position: MovableMajor.A2(5)
+    }, {
+        position: MovableMajor.E1(10)
+    }, {
+        position: MovableMajor.E2(10)
+    }]
 };
