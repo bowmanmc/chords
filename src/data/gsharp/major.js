@@ -2,15 +2,19 @@ import MovableMajor from '../movable/major';
 
 
 export default {
-    name: 'G♯ / A♭ Major',
+    name: 'G♯ / A♭ Major (G♯ / A♭)',
     shortName: 'G♯ / A♭',
     root: 'G♯ / A♭',
     quality: 'major',
-    positions: [
-        MovableMajor.E1(4),
-        MovableMajor.E2(4),
-        MovableMajor.D1(6),
-        MovableMajor.A1(11),
-        MovableMajor.A2(11)
-    ]
+    chords: [{
+        position: MovableMajor.E1(4)
+    }, {
+        position: MovableMajor.E2(4)
+    }, {
+        position: MovableMajor.D1(6)
+    }, {
+        position: MovableMajor.A1(11)
+    }, {
+        position: MovableMajor.A2(11)
+    }]
 };
