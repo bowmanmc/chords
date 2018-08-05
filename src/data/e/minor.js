@@ -3,15 +3,19 @@ import OpenMinor from '../open/minor';
 
 
 export default {
-    name: 'E Minor',
+    name: 'E Minor (Em)',
     shortName: 'Em',
     root: 'E',
     quality: 'minor',
-    positions: [
-        OpenMinor.E,
-        MovableMinor.D1(2),
-        MovableMinor.A1(7),
-        MovableMinor.A2(7),
-        MovableMinor.E2(12)
-    ]
+    chords: [{
+        position: OpenMinor.E
+    }, {
+        position: MovableMinor.D1(2)
+    }, {
+        position: MovableMinor.A1(7)
+    }, {
+        position: MovableMinor.A2(7)
+    }, {
+        position: MovableMinor.E2(12)
+    }]
 };
