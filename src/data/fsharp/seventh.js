@@ -2,16 +2,21 @@ import MovableSeventh from '../movable/seventh';
 
 
 export default {
-    name: 'F♯ / G♭ Seventh',
+    name: 'F♯ / G♭ Seventh (F♯7 / G♭7)',
     shortName: 'F♯7 / G♭7',
     root: 'F♯ / G♭',
     quality: 'seventh',
-    positions: [
-        MovableSeventh.E1(2),
-        MovableSeventh.E2(2),
-        MovableSeventh.D1(4),
-        MovableSeventh.A1(9),
-        MovableSeventh.A2(9),
-        MovableSeventh.A3(9)
-    ]
+    chords: [{
+        position: MovableSeventh.E1(2)
+    }, {
+        position: MovableSeventh.E2(2)
+    }, {
+        position: MovableSeventh.D1(4)
+    }, {
+        position: MovableSeventh.A1(9)
+    }, {
+        position: MovableSeventh.A2(9)
+    }, {
+        position: MovableSeventh.A3(9)
+    }]
 };
