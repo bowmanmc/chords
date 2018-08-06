@@ -11,13 +11,11 @@ class App extends React.Component {
     render() {
 
         const root = this.props.match.params.chord || 'open';
-        const quality = this.props.match.params.quality;
-
-        console.log(`Rendering Viewer for chord ${root} - ${quality}`);
+        //const quality = this.props.match.params.quality;
 
         return (
             <div className="App">
-                <Header selected={root} />
+                <Header />
                 <Viewer root={root} />
             </div>
         );

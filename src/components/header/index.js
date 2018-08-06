@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Navbar from './Navbar';
 import Selector from './Selector';
@@ -24,15 +23,11 @@ class Header extends React.Component {
 
                 <Selector active={this.state.activeSelector}
                     onClose={() => {
-                        this.setState({activeSelector: false});
+                        this.setState({activeSelector: null});
                     }} />
             </div>
         );
     }
 }
-
-Header.propTypes = {
-    selected: PropTypes.string.isRequired
-};
 
 export default Header;
