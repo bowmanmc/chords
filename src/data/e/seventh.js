@@ -2,18 +2,24 @@ import MovableSeventh from '../movable/seventh';
 
 
 export default {
-    name: 'E Seventh',
+    name: 'E Seventh (E7)',
     shortName: 'E7',
     root: 'E',
     quality: 'seventh',
-    positions: [{
-        tabs:      ['0','2','0','1','0','0'],
-        fingering: ['0','2','0','1','0','0']
-    },
-        MovableSeventh.D1(2),
-        MovableSeventh.A1(7),
-        MovableSeventh.A2(7),
-        MovableSeventh.A3(7),
-        MovableSeventh.E2(12)
-    ]
+    chords: [{
+        position: {
+            tabs: ['0', '2', '0', '1', '0', '0'],
+            fingering: ['0', '2', '0', '1', '0', '0']
+        }
+    }, {
+        position: MovableSeventh.D1(2)
+    }, {
+        position: MovableSeventh.A1(7)
+    }, {
+        position: MovableSeventh.A2(7)
+    }, {
+        position: MovableSeventh.A3(7)
+    }, {
+        position: MovableSeventh.E2(12)
+    }]
 };

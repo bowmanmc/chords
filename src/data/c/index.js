@@ -4,6 +4,7 @@ import minor from './minor';
 import minor7 from './minor7';
 import seventh from './seventh';
 
-export default {
+
+export default [
     major, minor, seventh, major7, minor7
-};
+];

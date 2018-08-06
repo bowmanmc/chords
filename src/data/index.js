@@ -16,7 +16,8 @@ import open from './open';
 
 
 export default {
-    c, csharp,
+    c,
+    csharp,
     d, dsharp,
     e,
     f, fsharp,

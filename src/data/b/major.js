@@ -2,15 +2,18 @@ import MovableMajor from '../movable/major';
 
 
 export default {
-    name: 'B Major',
-    shortName: 'B',
+    name: 'B Major (B)',
     root: 'B',
     quality: 'major',
-    positions: [
-        MovableMajor.A1(2),
-        MovableMajor.E1(7),
-        MovableMajor.E2(7),
-        MovableMajor.D1(9),
-        MovableMajor.A2(14)
-    ]
+    chords: [{
+        position: MovableMajor.A1(2)
+    }, {
+        position: MovableMajor.E1(7)
+    }, {
+        position: MovableMajor.E2(7)
+    }, {
+        position: MovableMajor.D1(9)
+    }, {
+        position: MovableMajor.A2(14)
+    }]
 };

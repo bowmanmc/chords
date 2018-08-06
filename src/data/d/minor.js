@@ -2,17 +2,21 @@ import MovableMinor from '../movable/minor';
 
 
 export default {
-    name: 'D Minor',
-    shortName: 'Dm',
+    name: 'D Minor (Dm)',
     root: 'D',
     quality: 'minor',
-    positions: [{
-        tabs: ['x','x','0','2','3','1'],
-        fingering: ['x','x','0','2','3','1']
-    },
-        MovableMinor.A1(5),
-        MovableMinor.A2(5),
-        MovableMinor.E1(10),
-        MovableMinor.E2(10)
-    ]
+    chords: [{
+        position: {
+            tabs: ['x', 'x', '0', '2', '3', '1'],
+            fingering: ['x', 'x', '0', '2', '3', '1']
+        }
+    }, {
+        position: MovableMinor.A1(5)
+    }, {
+        position: MovableMinor.A2(5)
+    }, {
+        position: MovableMinor.E1(10)
+    }, {
+        position: MovableMinor.E2(10)
+    }]
 };

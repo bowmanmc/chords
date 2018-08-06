@@ -3,25 +3,43 @@ import PropTypes from 'prop-types';
 
 import ChordDatabase from '../../data';
 
-import ChordCollectionViewer from './ChordCollectionViewer';
-import ChordFamilyViewer from './ChordFamilyViewer';
+import CollectionMeta from './CollectionMeta';
+import ChordList from './ChordList';
+
 
 import './index.css';
 
 
 const Viewer = (props) => {
-
     const { root } = props;
+    const collection = ChordDatabase[root];
 
-    const family = ChordDatabase[root];
-
-    if (family.type) {
-        return <ChordCollectionViewer collection={family} />;
+    if (!collection) {
+        // whoops!
+        return (
+            <div className="Viewer">
+                <h1>No Collection for "{root}" found.</h1>
+            </div>
+        );
     }
-    else {
-        return <ChordFamilyViewer family={family} />;
+
+    let items = collection;
+    if (!Array.isArray(collection)) {
+        items = [collection];
     }
 
+    return (
+        <div className="Viewer">
+            {items.map((item, i) => {
+                return (
+                    <React.Fragment key={i}>
+                        <CollectionMeta collection={item} />
+                        <ChordList chords={item.chords} />
+                    </React.Fragment>
+                );
+            })}
+        </div>
+    );
 };
 
 Viewer.propTypes = {

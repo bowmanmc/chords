@@ -71,12 +71,12 @@ const Selector = props => {
 };
 
 Selector.propTypes = {
-    active: PropTypes.bool,
+    active: PropTypes.string,
     onClose: PropTypes.func.isRequired
 };
 
 Selector.defaultProps = {
-    active: false
+    active: null
 };
 
 export default Selector;

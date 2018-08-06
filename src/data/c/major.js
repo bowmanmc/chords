@@ -3,15 +3,18 @@ import OpenMajor from '../open/major';
 
 
 export default {
-    name: 'C Major',
-    shortName: 'C',
+    name: 'C Major (C)',
     root: 'C',
     quality: 'major',
-    positions: [
-        OpenMajor.C,
-        MovableMajor.A1(3),
-        MovableMajor.E1(8),
-        MovableMajor.E2(8),
-        MovableMajor.D1(10)
-    ]
+    chords: [{
+        position: OpenMajor.C
+    }, {
+        position: MovableMajor.A1(3)
+    }, {
+        position: MovableMajor.E1(8)
+    }, {
+        position: MovableMajor.E2(8)
+    }, {
+        position: MovableMajor.D1(10)
+    }]
 };
