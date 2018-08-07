@@ -3,8 +3,6 @@
 @import "defaults/colors";
 
 
-$chordSize: 420px;
-
 
 .Viewer {
     color: $color-txt;
@@ -46,7 +44,17 @@ $chordSize: 420px;
         display: inline-block;
         scroll-snap-align: start;
         scroll-snap-coordinate: 0% 0%;
-        width: $chordSize;
+        max-height: 320px;
+        max-width: 320px;
+
+        @media screen and (orientation:portrait) {
+            height: 92vh;
+            width: 92vw;
+        }
+        @media screen and (orientation:landscape) {
+            height: 65vh;
+            width: 65vh;
+        }
 
         .ChordDiagram {
             background: $color-white;
