@@ -14,9 +14,17 @@ const CollectionMeta = (props) => {
         description = (<p>{collection.description}</p>);
     }
 
+    let altName = null;
+    if (collection.shortName) {
+        altName = (
+            <span className="altName">({collection.shortName})</span>
+        );
+    }
+
     return (
         <div className="CollectionMeta">
             <h1>{collection.name}</h1>
+            {altName}
             {description}
         </div>
     );

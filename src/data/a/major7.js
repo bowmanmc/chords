@@ -3,7 +3,8 @@ import OpenMajor7 from '../open/major7';
 
 
 export default {
-    name: 'A Major Seventh (Amaj7)',
+    name: 'A Major Seventh',
+    shortName: 'Amaj7',
     root: 'A',
     quality: 'maj7',
     chords: [{

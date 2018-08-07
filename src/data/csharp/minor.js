@@ -2,7 +2,8 @@ import MovableMinor from '../movable/minor';
 
 
 export default {
-    name: 'C♯ / D♭ Minor (C♯m / D♭m)',
+    name: 'C♯ / D♭ Minor',
+    shortName: 'C♯m / D♭m',
     root: 'C♯ / D♭',
     quality: 'minor',
     chords: [{
