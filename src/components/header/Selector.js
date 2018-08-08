@@ -14,7 +14,7 @@ const Selector = props => {
     const resetScroll = () => {
         props.onClose();
         window.scrollTo(0,0);
-        Array.from(document.getElementsByClassName("Positions")).forEach(el => {
+        Array.from(document.getElementsByClassName("ChordList")).forEach(el => {
             el.scrollLeft = 0;
         });
     };
