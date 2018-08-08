@@ -2,7 +2,7 @@ import MovableMajor from '../movable/major';
 
 
 export default {
-    name: 'F Major (F)',
+    name: 'F Major',
     shortName: 'F',
     root: 'F',
     quality: 'major',

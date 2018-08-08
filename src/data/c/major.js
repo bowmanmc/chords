@@ -3,7 +3,8 @@ import OpenMajor from '../open/major';
 
 
 export default {
-    name: 'C Major (C)',
+    name: 'C Major',
+    shortName: 'C',
     root: 'C',
     quality: 'major',
     chords: [{

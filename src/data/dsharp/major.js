@@ -2,7 +2,8 @@ import MovableMajor from '../movable/major';
 
 
 export default {
-    name: 'D♯ / E♭ Major (D♯ / E♭)',
+    name: 'D♯ / E♭ Major',
+    shortName: 'D♯ / E♭',
     root: 'D♯ / E♭',
     quality: 'major',
     chords: [{

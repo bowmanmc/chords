@@ -2,7 +2,7 @@ import MovableMinor from '../movable/minor';
 
 
 export default {
-    name: 'F Minor (Fm)',
+    name: 'F Minor',
     shortName: 'Fm',
     root: 'F',
     quality: 'minor',

@@ -2,7 +2,8 @@ import MovableMajor7 from '../movable/major7';
 
 
 export default {
-    name: 'B Major Seventh (Bmaj7)',
+    name: 'B Major Seventh',
+    shortName: 'Bmaj7',
     root: 'B',
     quality: 'maj7',
     chords: [{

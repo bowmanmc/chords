@@ -2,7 +2,8 @@ import MovableMajor7 from '../movable/major7';
 
 
 export default {
-    name: 'A♯ / B♭ Major Seventh (A♯maj7 / B♭maj7)',
+    name: 'A♯ / B♭ Major Seventh',
+    shortName: 'A♯maj7 / B♭maj7',
     root: 'A♯ / B♭',
     quality: 'maj7',
     chords: [{

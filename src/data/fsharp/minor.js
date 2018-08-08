@@ -2,7 +2,7 @@ import MovableMinor from '../movable/minor';
 
 
 export default {
-    name: 'F♯ / G♭ Minor (F♯m / G♭m)',
+    name: 'F♯ / G♭ Minor',
     shortName: 'F♯m / G♭m',
     root: 'F♯ / G♭',
     quality: 'minor',

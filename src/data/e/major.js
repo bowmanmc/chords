@@ -3,7 +3,7 @@ import OpenMajor from '../open/major';
 
 
 export default {
-    name: 'E Major (E)',
+    name: 'E Major',
     shortName: 'E',
     root: 'E',
     quality: 'major',

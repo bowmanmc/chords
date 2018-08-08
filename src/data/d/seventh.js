@@ -2,7 +2,8 @@ import MovableSeventh from '../movable/seventh';
 
 
 export default {
-    name: 'D Seventh (D7)',
+    name: 'D Seventh',
+    shortName: 'D7',
     root: 'D',
     quality: 'seventh',
     chords: [{

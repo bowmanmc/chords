@@ -2,7 +2,7 @@ import MovableSeventh from '../movable/seventh';
 
 
 export default {
-    name: 'F♯ / G♭ Seventh (F♯7 / G♭7)',
+    name: 'F♯ / G♭ Seventh',
     shortName: 'F♯7 / G♭7',
     root: 'F♯ / G♭',
     quality: 'seventh',

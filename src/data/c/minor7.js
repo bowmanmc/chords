@@ -1,5 +1,6 @@
 export default {
-    name: 'C Minor Seventh (Cm7)',
+    name: 'C Minor Seventh',
+    shortName: 'Cm7',
     root: 'C',
     quality: 'm7',
     chords: [{

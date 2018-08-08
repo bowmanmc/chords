@@ -3,7 +3,8 @@ import OpenMajor from '../open/major';
 
 
 export default {
-    name: 'D Major (D)',
+    name: 'D Major',
+    shortName: 'D',
     root: 'D',
     quality: 'major',
     chords: [{

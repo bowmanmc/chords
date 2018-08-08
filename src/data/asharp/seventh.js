@@ -2,7 +2,8 @@ import MovableSeventh from '../movable/seventh';
 
 
 export default {
-    name: 'A♯ / B♭ Seventh (A♯7 / B♭7)',
+    name: 'A♯ / B♭ Seventh',
+    shortName: 'A♯7 / B♭7',
     root: 'A♯ / B♭',
     quality: 'seventh',
     chords: [{

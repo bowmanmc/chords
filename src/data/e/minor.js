@@ -3,7 +3,7 @@ import OpenMinor from '../open/minor';
 
 
 export default {
-    name: 'E Minor (Em)',
+    name: 'E Minor',
     shortName: 'Em',
     root: 'E',
     quality: 'minor',

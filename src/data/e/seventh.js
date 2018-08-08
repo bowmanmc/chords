@@ -2,7 +2,7 @@ import MovableSeventh from '../movable/seventh';
 
 
 export default {
-    name: 'E Seventh (E7)',
+    name: 'E Seventh',
     shortName: 'E7',
     root: 'E',
     quality: 'seventh',

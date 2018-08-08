@@ -3,7 +3,7 @@ import OpenMajor7 from '../open/major7';
 
 
 export default {
-    name: 'F Major Seventh (Fmaj7)',
+    name: 'F Major Seventh',
     shortName: 'Fmaj7',
     root: 'F',
     quality: 'maj7',

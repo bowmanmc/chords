@@ -2,7 +2,7 @@ import MovableMinor from '../movable/minor';
 
 
 export default {
-    name: 'G Minor (Gm)',
+    name: 'G Minor',
     shortName: 'Gm',
     root: 'G',
     quality: 'minor',

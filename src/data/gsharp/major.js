@@ -2,7 +2,7 @@ import MovableMajor from '../movable/major';
 
 
 export default {
-    name: 'G♯ / A♭ Major (G♯ / A♭)',
+    name: 'G♯ / A♭ Major',
     shortName: 'G♯ / A♭',
     root: 'G♯ / A♭',
     quality: 'major',
