@@ -7,6 +7,7 @@
 .Viewer {
     color: $color-txt;
     padding: 85px 0;
+    padding-top: calc(env(safe-area-inset-top) + 85px);
 
     h1 { // No collection for "foo" found
         color: $color-dark-dark;
