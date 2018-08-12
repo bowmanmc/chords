@@ -7,6 +7,14 @@
 .Viewer {
     color: $color-txt;
     padding: 85px 0;
+
+    h1 { // No collection for "foo" found
+        color: $color-dark-dark;
+        font-size: $fontsize-xlarge;
+        font-weight: bold;
+        margin: 1.0em 2.0em;
+        padding: 0;
+    }
 }
 
 .CollectionMeta {
