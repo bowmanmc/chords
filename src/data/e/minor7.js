@@ -4,7 +4,7 @@ import OpenMinor7 from '../open/minor7';
 
 export default {
     name: 'E Minor Seventh',
-    shotName: 'D♯m7 / E♭m7',
+    shotName: 'Em7',
     root: 'E',
     quality: 'm7',
     chords: [{
