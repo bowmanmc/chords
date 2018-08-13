@@ -1,5 +1,10 @@
 
 export default {
+    // 6th String
+    E: {
+        tabs:      ['0','2','2','0','3','0'],
+        fingering: ['0','2','3','0','4','0']
+    },
     // 5th String
     A: {
         tabs:      ['x','0','2','0','1','0'],
