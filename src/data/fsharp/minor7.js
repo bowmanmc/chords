@@ -3,7 +3,7 @@ import MovableMinor7 from '../movable/minor7';
 
 export default {
     name: 'F♯ / G♭ Minor Seventh',
-    shotName: 'F♯m7 / G♭m7',
+    shortName: 'F♯m7 / G♭m7',
     root: 'F♯ / G♭',
     quality: 'm7',
     chords: [{
