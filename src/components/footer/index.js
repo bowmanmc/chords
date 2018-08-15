@@ -14,7 +14,7 @@ const Footer = () => {
             </section>
 
             <section className="app">
-                <a href="https://www.shredahead.app"><Logo grayscale={true} /></a>
+                <a target="_system" href="https://www.shredahead.app"><Logo grayscale={true} /></a>
                 <p>
                     For more information about Shred Ahead, please check out
                     our website
