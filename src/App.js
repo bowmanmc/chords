@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Footer from './components/footer';
 import Header from './components/header';
 import Viewer from './components/viewer';
 
@@ -17,6 +18,7 @@ class App extends React.Component {
             <div className="App">
                 <Header />
                 <Viewer root={root} />
+                <Footer />
             </div>
         );
     }

@@ -12,13 +12,18 @@ const GUITARS = [
     <LesPaul />, <Stratocaster />, <Telecaster />, <Acoustic />
 ];
 
-const Logo = () => {
+const Logo = (props) => {
 
     const randomIdx = Math.floor(Math.random() * GUITARS.length);
     const randomGuitar = GUITARS[randomIdx];
 
+    let className="Logo";
+    if (props.grayscale) {
+        className = "Logo Logo-grayscale";
+    }
+
     return (
-        <svg className="Logo" viewBox="0 0 1136.21 419.5">
+        <svg className={className} viewBox="0 0 1136.21 419.5">
             <defs>
                 <clipPath id="a">
                     <path fill="none" d="M179 0c-359.6-1.3-79.4 419-1.3 419.5S561.34 1.3 179 0z"/>

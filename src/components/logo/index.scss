@@ -3,18 +3,28 @@
 @import "defaults/colors";
 
 
+// Colorful Header Logo
 .Logo {
-
     .Pick {
         fill: $color-primary;
     }
-
     .Guitar {
         fill: $color-primary-80;
     }
-
     .Text {
         fill: $color-bright;
     }
+}
 
+// Grayscale Footer Logo
+.Logo-grayscale {
+    .Pick {
+        fill: $color-gray-50;
+    }
+    .Guitar {
+        fill: $color-bg;
+    }
+    .Text {
+        fill: $color-bg;
+    }
 }
