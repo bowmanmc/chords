@@ -13,6 +13,7 @@
     left: 0;
     max-height: 0;
     overflow-y: scroll;
+    padding-top: env(safe-area-inset-top);
     position: fixed;
     right: 0;
     top: 0;
